@@ -63,7 +63,7 @@ public class Character : MonoBehaviour
         return new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
     }
 
-    void ShootBullets(Vector3 direction)
+    public void ShootBullets(Vector3 direction)
     {
         GameObject newBullet = Instantiate(BulletPrefab);
         newBullet.transform.position = transform.position;
