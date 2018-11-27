@@ -9,10 +9,12 @@ namespace Brodie_Character_Project
 {
     class Program
     {
+        
+
         static void Main(string[] args)
         {
-            List<Character> characters = new List<Character>();
             int uinput;
+            List<Character> characters = new List<Character>();
 
             Console.WriteLine("Welcome to my character modifier program!");
 
@@ -25,6 +27,7 @@ namespace Brodie_Character_Project
                 Console.WriteLine("4. Load all existing characters");
                 Console.WriteLine("5. List all current characters");
                 Console.WriteLine("6. Quit");
+                Console.WriteLine("Remember to spell the name of your character CASE SENSITIVE in all prompts.");
                 Console.WriteLine();
 
                 uinput = int.Parse(Console.ReadLine());
@@ -37,22 +40,51 @@ namespace Brodie_Character_Project
 
                 if (uinput == 2)
                 {
-                    //ModifyCharacter(created character from list);
+                    bool modified = false;
+
+                    Console.WriteLine("Which character would you like to modify?");
+                    string input = Console.ReadLine();
+
+                    for (int i = 0; i < characters.Count; i++)
+                    {
+                        if (characters[i].name == input)
+                        {
+                            ModifyCharacter(characters[i]);
+                            modified = true;
+                            break;
+                        }
+                    }
+
+                    if (modified == false)
+                    {
+                        Console.WriteLine("This character was not found.");
+                    }
+                    Console.WriteLine();
                 }
 
                 if (uinput == 3)
                 {
+                    Console.WriteLine("Which character would you like to delete?");
+                    string input = Console.ReadLine();
 
+                    if (DeleteCharacter(characters, input) == true)
+                    {
+                        Console.WriteLine("This character was deleted!");
+                    }
+                    if (DeleteCharacter(characters, input) == false)
+                    {
+                        Console.WriteLine("This character was not deleted, because it couldn't be found.");
+                    }
                 }
 
                 if (uinput == 4)
                 {
-
+                    characters = LoadCharacters();
                 }
 
                 if (uinput == 5)
                 {
-
+                    ListCharacters(characters);
                 }
             }
             while (uinput != 6);
@@ -60,8 +92,34 @@ namespace Brodie_Character_Project
 
         static Character CreateCharacter()
         {
-            Console.WriteLine("Enter a name for your character:");
-            string charName = Console.ReadLine();
+            string charName = "";
+            bool correct = true;
+
+            do
+            {
+                List<Character> characters = new List<Character>();
+
+                Console.WriteLine("Enter a name for your character:");
+                charName = Console.ReadLine();
+                correct = true;
+
+                for (int i = 0; i < characters.Count; i++)
+                {
+                    if (charName == characters[i].name)
+                    {
+                        Console.WriteLine("This name has already been chosen. Please enter a new name.");
+                        correct = false;
+                    }
+                }
+
+                if (correct == true)
+                {
+                    break;
+                }
+            }
+            while (true);
+
+
             Console.WriteLine("Enter a strength for your character:");
             int strength = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter a dexterity for your character:");
@@ -166,32 +224,73 @@ namespace Brodie_Character_Project
             using (StreamWriter sw = new StreamWriter(path))
             {
                 sw.WriteLine(character.name);
-                sw.WriteLine(character.strength + " ");
-                sw.Write(character.dexterity + " ");
-                sw.Write(character.agility + " ");
-                sw.Write(character.speed + " ");
-                sw.Write(character.knowledge + " ");
+                sw.WriteLine(character.strength);
+                sw.WriteLine(character.dexterity);
+                sw.WriteLine(character.agility);
+                sw.WriteLine(character.speed);
+                sw.WriteLine(character.knowledge);
             }
         }
 
-        //static bool DeleteCharacter(List<Character> characters, string characterName)
-        //{
-        //    return
-        //}
+        static bool DeleteCharacter(List<Character> characters, string characterName)
+        {
+            bool deleted = false;
 
-        //static Character LoadCharacter(string characterName)
-        //{
-        //    return
-        //}
+            for (int i = 0; i < characters.Count; i++)
+            {
+                if (characterName == characters[i].name)
+                {
+                    if (File.Exists(@"" + characterName + ".txt"))
+                    {
+                        File.Delete(@"" + characterName + ".txt");
+                    }
+                    deleted = true;
+                    break;
+                }
+            }
 
-        //static List<Character> LoadCharacters()
-        //{
-        //    return
-        //}
+            return deleted;
+        }
 
-        //static void ListCharacters(List<Character> characters)
-        //{
+        static Character LoadCharacter(string path)
+        {
+            List<string> file = new List<string>();
 
-        //}
+            file.Clear();
+            using (StreamReader sr = new StreamReader(path))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    file.Add(line);
+                }
+            }
+
+            Character character = new Character(file[0], int.Parse(file[1]), int.Parse(file[2]), int.Parse(file[3]), int.Parse(file[4]), int.Parse(file[5]));
+
+            return character;
+        }
+
+        static List<Character> LoadCharacters()
+        {
+
+            List<Character> characters = new List<Character>();
+            string path = AppDomain.CurrentDomain.BaseDirectory;
+
+            foreach (string file in Directory.EnumerateFiles(path, "*.txt"))
+            {
+                characters.Add(LoadCharacter(file));
+            }
+
+            return characters;
+        }
+
+        static void ListCharacters(List<Character> characters)
+        {
+            for (int i = 0; i < characters.Count; i++)
+            {
+                Console.WriteLine(characters[i]);
+            }
+        }
     }
 }
