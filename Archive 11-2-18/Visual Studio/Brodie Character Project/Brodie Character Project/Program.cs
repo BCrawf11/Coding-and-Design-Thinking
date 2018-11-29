@@ -3,24 +3,23 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Brodie_Character_Project
 {
     class Program
     {
-        
-
         static void Main(string[] args)
         {
             int uinput;
             List<Character> characters = new List<Character>();
 
             Console.WriteLine("Welcome to my character modifier program!");
+            Console.WriteLine();
 
             do
             {
-                Console.WriteLine("Press a number based on the action that you want to perform:");
+                Console.WriteLine("***************************************************************************************************************");
+                Console.WriteLine("Press a number based on the action that you want to perform: (You should load everything beforehand. Hint hint)");
                 Console.WriteLine("1. Create a character");
                 Console.WriteLine("2. Modify a character");
                 Console.WriteLine("3. Delete a character");
@@ -28,6 +27,7 @@ namespace Brodie_Character_Project
                 Console.WriteLine("5. List all current characters");
                 Console.WriteLine("6. Quit");
                 Console.WriteLine("Remember to spell the name of your character CASE SENSITIVE in all prompts.");
+                Console.WriteLine("***************************************************************************************************************");
                 Console.WriteLine();
 
                 uinput = int.Parse(Console.ReadLine());
@@ -41,6 +41,7 @@ namespace Brodie_Character_Project
                 if (uinput == 2)
                 {
                     bool modified = false;
+                    characters = LoadCharacters();
 
                     Console.WriteLine("Which character would you like to modify?");
                     string input = Console.ReadLine();
@@ -69,7 +70,7 @@ namespace Brodie_Character_Project
 
                     if (DeleteCharacter(characters, input) == true)
                     {
-                        Console.WriteLine("This character was deleted!");
+                        Console.WriteLine("This character was deleted! Load again to update.");
                     }
                     if (DeleteCharacter(characters, input) == false)
                     {
@@ -80,11 +81,13 @@ namespace Brodie_Character_Project
                 if (uinput == 4)
                 {
                     characters = LoadCharacters();
+                    Console.WriteLine("Characters loaded!");
+                    Console.WriteLine();
                 }
 
                 if (uinput == 5)
                 {
-                    ListCharacters(characters);
+                    PrintAllCharacters(characters);
                 }
             }
             while (uinput != 6);
@@ -98,6 +101,7 @@ namespace Brodie_Character_Project
             do
             {
                 List<Character> characters = new List<Character>();
+                characters = LoadCharacters();
 
                 Console.WriteLine("Enter a name for your character:");
                 charName = Console.ReadLine();
@@ -108,6 +112,7 @@ namespace Brodie_Character_Project
                     if (charName == characters[i].name)
                     {
                         Console.WriteLine("This name has already been chosen. Please enter a new name.");
+                        Console.WriteLine();
                         correct = false;
                     }
                 }
@@ -130,6 +135,7 @@ namespace Brodie_Character_Project
             int speed = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter a knowledge level for your character:");
             int knowledge = int.Parse(Console.ReadLine());
+            Console.WriteLine();
 
             Character character = new Character(charName, strength, dexterity, agility, speed, knowledge);
             SaveCharacter(character);
@@ -285,11 +291,17 @@ namespace Brodie_Character_Project
             return characters;
         }
 
-        static void ListCharacters(List<Character> characters)
+        static void PrintAllCharacters(List<Character> characters)
         {
             for (int i = 0; i < characters.Count; i++)
             {
-                Console.WriteLine(characters[i]);
+                Console.WriteLine(characters[i].name);
+                Console.WriteLine("strength: " + characters[i].strength);
+                Console.WriteLine("dexterity: " + characters[i].dexterity);
+                Console.WriteLine("agility: " + characters[i].agility);
+                Console.WriteLine("speed: " + characters[i].speed);
+                Console.WriteLine("knowledge: " + characters[i].knowledge);
+                Console.WriteLine();
             }
         }
     }
