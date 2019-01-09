@@ -21,7 +21,6 @@ public class Enemies : MonoBehaviour
 
         if (timeLeft < 0)
         {
-            ShootBullets();
         }
 
         transform.position += velocity * Time.deltaTime * speed;

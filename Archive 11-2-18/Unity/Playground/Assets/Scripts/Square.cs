@@ -13,7 +13,7 @@ public class Square : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        ChangeColor();
+
 	}
 	
 	// Update is called once per frame
@@ -42,8 +42,6 @@ public class Square : MonoBehaviour {
         {
             GameManager.Instance.MyCharacter = this;
         }
-
-        ChangeColor();
 
         velocity.Normalize();
 
@@ -96,19 +94,6 @@ public class Square : MonoBehaviour {
             GameObject newBall = Instantiate(ballPrefab);
             newBall.transform.position = transform.position;
             newBall.GetComponent<Ball>().velocity = LookAtDirection(transform.eulerAngles.z);
-        }
-    }
-
-    float timer = 0;
-    float timeToReach = .25f;
-
-    void ChangeColor()
-    {
-        timer = Time.deltaTime;
-        if (timer > timeToReach)
-        {
-            GetComponent<SpriteRenderer>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
-            timer = 0;
         }
     }
 }
