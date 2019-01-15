@@ -8,11 +8,11 @@ namespace Inheritance_Diagram
 {
     class Motorcycle : Automobile
     {
-        protected int handlebarWidth;
+        protected float handlebarWidth;
         protected bool isLDCapable;
 
-        public Motorcycle(int topSpeed, int gasMileage, string color, bool needsMtnce, bool isMuffled, int handlebarWidth, bool isLDCapable)
-            : base (topSpeed, gasMileage, color, needsMtnce, isMuffled)
+        public Motorcycle (int topSpeed, int gasMileage, string color, bool needsMtnce, bool isMuffled, float handlebarWidth, bool isLDCapable)
+            : base(topSpeed, gasMileage, color, needsMtnce, isMuffled)
         {
             this.handlebarWidth = handlebarWidth;
             this.isLDCapable = isLDCapable;
@@ -20,12 +20,23 @@ namespace Inheritance_Diagram
 
         public override void GoVroom()
         {
-            throw new NotImplementedException();
+
         }
 
         public override void Honk()
         {
-            throw new NotImplementedException();
+
+        }
+
+        public override void PrintVehicle()
+        {
+            Console.WriteLine("Top speed: " + topSpeed + "mph");
+            Console.WriteLine("Gas mileage: " + gasMileage + "mpg");
+            Console.WriteLine("Color: " + color);
+            Console.WriteLine("Needs Maintenance: " + needsMtnce.ToString());
+            Console.WriteLine("Muffled: " + isMuffled.ToString());
+            Console.WriteLine("Handlebar width: " + handlebarWidth + "ft");
+            Console.WriteLine("Long distance capable: " + isLDCapable.ToString());
         }
     }
 }

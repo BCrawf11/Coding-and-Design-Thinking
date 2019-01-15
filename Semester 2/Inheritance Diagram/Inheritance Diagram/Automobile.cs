@@ -14,7 +14,7 @@ namespace Inheritance_Diagram
         protected bool needsMtnce;
         protected bool isMuffled;
 
-        public Automobile(int topSpeed, int gasMileage, string color, bool needsMtnce, bool isMuffled)
+        public Automobile (int topSpeed, int gasMileage, string color, bool needsMtnce, bool isMuffled)
         {
             this.topSpeed = topSpeed;
             this.gasMileage = gasMileage;
@@ -26,5 +26,7 @@ namespace Inheritance_Diagram
         public abstract void GoVroom();
 
         public abstract void Honk();
+
+        public abstract void PrintVehicle();
     }
 }

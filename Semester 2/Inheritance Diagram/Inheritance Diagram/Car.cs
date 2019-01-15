@@ -11,7 +11,7 @@ namespace Inheritance_Diagram
         protected int seats;
         protected bool hasFlipSeats;
 
-        public Car(int topSpeed, int gasMileage, string color, bool needsMtnce, bool isMuffled, int seats, bool hasFlipSeats)
+        public Car (int topSpeed, int gasMileage, string color, bool needsMtnce, bool isMuffled, int seats, bool hasFlipSeats)
             : base (topSpeed, gasMileage, color, needsMtnce, isMuffled)
         {
             this.seats = seats;
@@ -20,12 +20,23 @@ namespace Inheritance_Diagram
 
         public override void GoVroom()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("vrooommmmmmm");
         }
 
         public override void Honk()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("bbeeeEEEEPP");
+        }
+
+        public override void PrintVehicle()
+        {
+            Console.WriteLine("Top speed: " + topSpeed + "mph");
+            Console.WriteLine("Gas mileage: " + gasMileage + "mpg");
+            Console.WriteLine("Color: " + color);
+            Console.WriteLine("Needs Maintenance: " + needsMtnce.ToString());
+            Console.WriteLine("Muffled: " + isMuffled.ToString());
+            Console.WriteLine("Seats: " + seats);
+            Console.WriteLine("Flip seats: " + hasFlipSeats.ToString());
         }
     }
 }
