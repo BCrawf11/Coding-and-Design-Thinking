@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Deck_Of_Cards
 {
     enum Face { Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King }
-    enum Suit { Clubs, Spades, Hearts, Diamonds }
+    enum Suit { Clubs, Spades, Hearts, Diamonds, }
 
     class Card
     {
@@ -28,18 +28,18 @@ namespace Deck_Of_Cards
             { Face.King, 13 }
         };
 
-        Face f;
-        Suit s;
+        public Face face;
+        public Suit suit;
 
         public Card (Face f, Suit s)
         {
-            this.f = f;
-            this.s = s;
+            this.face = f;
+            this.suit = s;
         }
 
         public void Print()
         {
-            string msg = "| " + f.ToString() + " of " + s.ToString() + " |";
+            string msg = "| " + face.ToString() + " of " + suit.ToString() + " |";
 
             for (int i = 0; i < msg.Length; i++)
             {
