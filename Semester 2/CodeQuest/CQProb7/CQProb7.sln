@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQProb7", "CQProb7\CQProb7.csproj", "{97084C33-0CA9-426F-977C-549D171305B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97084C33-0CA9-426F-977C-549D171305B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97084C33-0CA9-426F-977C-549D171305B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97084C33-0CA9-426F-977C-549D171305B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97084C33-0CA9-426F-977C-549D171305B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {843CCD1D-7850-4679-8001-D4FB80C27891}
+	EndGlobalSection
+EndGlobal

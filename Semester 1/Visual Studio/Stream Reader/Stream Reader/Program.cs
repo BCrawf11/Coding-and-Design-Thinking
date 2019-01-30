@@ -16,8 +16,11 @@ namespace Stream_Reading
             int[,] a = new int[4, 4];
             List<string> b = new List<string>();
 
+            //same thing
             string path = @"C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Written File\Example.txt";
             path = AppDomain.CurrentDomain.BaseDirectory + @"Example.txt";
+            //
+
             string uinput;
 
             do
