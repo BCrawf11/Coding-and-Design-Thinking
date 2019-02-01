@@ -44,8 +44,8 @@ namespace CQProb7
                 {
                     for (int k = allstrings[i][j].Length - 1; k >= 0; k--)
                     {
-                        reverseString += allstrings[i][j][k];
                         allstrings[i][j] = allstrings[i][j].ToLower();
+                        reverseString += allstrings[i][j][k];
                     }
 
                     if (reverseString == allstrings[i][j])
@@ -55,7 +55,6 @@ namespace CQProb7
                     }
                     else
                     {
-                        //need to fix
                         fnums.Add(j + 1);
                         reverseString = "";
                     }
@@ -68,14 +67,20 @@ namespace CQProb7
                 }
                 else
                     Console.Write("False - ");
+
                     for (int l = 0; l < fnums.Count; l++)
                     {
-                        //need to fix; writes "False - 444"
-                        Console.Write(fnums[i]);
+                        Console.Write(fnums[l]);
+
+                        if (l == fnums.Count - 1)
+                        {
+                            continue;
+                        }
+                        else
+                            Console.Write(", ");
                     }
             }
             Console.WriteLine();
         }
     }
 }
-
