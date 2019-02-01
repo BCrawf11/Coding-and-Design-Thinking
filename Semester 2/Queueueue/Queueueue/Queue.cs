@@ -7,33 +7,35 @@ using System.Threading;
 
 namespace Queueueue
 {
-    class Queue
+    class Queue<T> : IClearable, IPrintable, ICountable where T : IComparable<T>
     {
-        List<int> queue = new List<int>();
+        List<T> queue = new List<T>();
 
-        public void EnQueue(int val)
+        public Queue() { }
+
+        public void EnQueue(T val)
         {
             queue.Insert(0, val);
         }
 
-        public int Peek()
+        public T Peek()
         {
             if (queue.Count == 0)
             {
-                return Int32.MaxValue;
+                return default(T);
             }
 
             return queue[queue.Count - 1];
         }
 
-        public int DeQueue()
+        public T DeQueue()
         {
             if (queue.Count == 0)
             {
-                return Int32.MaxValue;
+                return default(T);
             }
 
-            int hold = queue[queue.Count - 1];
+            T hold = queue[queue.Count - 1];
             queue.RemoveAt(queue.Count - 1);
             return hold;
         }
@@ -62,9 +64,26 @@ namespace Queueueue
             Console.WriteLine();
         }
 
+        public int Search(T val)
+        {
+            for (int i = 0; i < queue.Count; i++)
+            {
+                if (val.CompareTo(queue[i]) == 0)
+                {
+                    return i;
+                }
+            }
+            return Int32.MaxValue;
+        }
+
         public void Clear()
         {
             queue.Clear();
+        }
+
+        public int Count()
+        {
+            return queue.Count;
         }
     }
 }

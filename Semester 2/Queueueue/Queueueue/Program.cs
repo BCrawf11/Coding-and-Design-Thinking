@@ -10,7 +10,8 @@ namespace Queueueue
     {
         static void Main(string[] args)
         {
-            Queue myQueue = new Queue();
+            Queue<int> myQueue = new Queue<int>();
+            Queue<Currencies> myCurrencies = new Queue<Currencies>();
             int input;
 
             Console.Write("Welcome to my queue! ");
@@ -24,6 +25,7 @@ namespace Queueueue
                 Console.WriteLine("3. View the first element of the queue and delete it");
                 Console.WriteLine("4. Print the whole queue");
                 Console.WriteLine("5. Clear the queue");
+                Console.WriteLine("6. Search the queue for a number");
                 Console.WriteLine();
 
                 input = int.Parse(Console.ReadLine());
@@ -43,7 +45,7 @@ namespace Queueueue
                 {
                     int temp = myQueue.Peek();
 
-                    if (temp == Int32.MaxValue)
+                    if (temp == 0)
                     {
                         Console.WriteLine("Oops! You tried to peek from an empty queue!");
                         Console.WriteLine();
@@ -58,7 +60,7 @@ namespace Queueueue
                 {
                     int temp = myQueue.DeQueue();
 
-                    if (temp == Int32.MaxValue)
+                    if (temp == 0)
                     {
                         Console.WriteLine("Oops! You tried to remove a number from an empty queue!");
                         Console.WriteLine();
@@ -83,6 +85,20 @@ namespace Queueueue
                     myQueue.Clear();
                     myQueue.Print();
                     Console.WriteLine();
+                }
+
+                if (input == 6)
+                {
+                    Console.WriteLine("Enter a number that you would like to search for.");
+                    int input3 = int.Parse(Console.ReadLine());
+
+                    int temp = myQueue.Search(input3);
+                    if (temp == Int32.MaxValue)
+                    {
+                        Console.WriteLine("This number was not found.");
+                    }
+
+                    Console.WriteLine("Your number was found at the " + temp + " index.");
                 }
 
             } while (input != -1);
