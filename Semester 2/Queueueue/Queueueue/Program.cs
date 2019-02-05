@@ -12,7 +12,14 @@ namespace Queueueue
         {
             Queue<int> myQueue = new Queue<int>();
             Queue<Currencies> myCurrencies = new Queue<Currencies>();
+            Random rand = new Random();
             int input;
+
+            for (int i = 0; i < 10; i++)
+            {
+                myCurrencies.EnQueue(new Currencies(rand.Next(0, 100), rand.Next(0, 100), rand.Next(0, 100)));
+            }
+            myCurrencies.Print();
 
             Console.Write("Welcome to my queue! ");
 

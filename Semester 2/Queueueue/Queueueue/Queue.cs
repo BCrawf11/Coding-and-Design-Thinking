@@ -47,7 +47,14 @@ namespace Queueueue
 
             for (int i = 0; i < queue.Count; i++)
             {
-                Console.Write(queue[i] + " ");
+                if (queue[i] is IPrintable)
+                {
+                    ((IPrintable)queue[i]).Print();
+                }
+                else
+                {
+                    Console.Write(queue[i] + " ");
+                }
 
                 if (i == queue.Count - 1)
                 {
