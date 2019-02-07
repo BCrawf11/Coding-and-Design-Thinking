@@ -11,6 +11,12 @@ namespace AlgorithmsPractice
     {
         static void Main(string[] args)
         {
+            //Prob1();
+            Prob2();
+        }
+
+        public static void Prob1()
+        {
             List<string> coins = new List<string>();
             string path1 = AppDomain.CurrentDomain.BaseDirectory + @"Prob01.in_.txt";
             float total = 0;
@@ -25,13 +31,13 @@ namespace AlgorithmsPractice
                 string line;
 
                 while ((line = sr.ReadLine()) != null)
-                {          
+                {
                     coins.Add(line);
                 }
             }
 
             for (int i = 0; i < coins.Count; i++)
-            { 
+            {
                 if (coins[i].Contains("HALFDOLLAR") || coins[i].Contains("QUARTER") ||
                     coins[i].Contains("DIME") || coins[i].Contains("NICKEL") || coins[i].Contains("PENNY"))
                 {
@@ -71,8 +77,98 @@ namespace AlgorithmsPractice
                 }
             }
 
-            total = (h/2f) + (q/4f) + (d/10f) + (n/20f) + (p/100f);
+            total = (h / 2f) + (q / 4f) + (d / 10f) + (n / 20f) + (p / 100f);
             Console.WriteLine("$" + total.ToString("0.00"));
+        }
+
+        public static void Prob2()
+        {
+            List<List<int>> allnums = new List<List<int>>();
+            string path1 = AppDomain.CurrentDomain.BaseDirectory + @"Prob02.in_.txt";
+            bool valid = true;
+            bool ascending = false;
+            bool descending = false;
+
+            using (StreamReader sr = new StreamReader(path1))
+            {
+                string line;
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    List<string> lstrings = line.Split(' ').ToList();
+                    List<int> nums = new List<int>();
+
+                    for (int i = 0; i < lstrings.Count; i++)
+                    {
+                        int result;
+
+                        if (int.TryParse(lstrings[i], out result) == true)
+                        {
+                            nums.Add(result);
+                        }
+                        else
+                        {
+                            valid = false;
+                            break;
+                        }
+                    }
+
+                    if (valid == true)
+                    {
+                        for (int i = 0; i < allnums.Count; i++)
+                        {
+                            allnums.Add(allnums[i]);
+                        }
+                    }
+                    else
+                        Console.WriteLine("The input was invalid");
+                }
+
+                for (int j = 0; j < allnums.Count; j++)
+                {
+                    for (int k = 0; k < allnums[j].Count - 1; k++)
+                    {
+                        int dcount = 0;
+                        int acount = 0;
+
+                        if (allnums[j][k] > allnums[j][k + 1])
+                        {
+                            dcount++;
+                            goto End;
+                        }
+
+                        if (allnums[j][k] < allnums[j][k + 1])
+                        {
+                            acount++;
+                            goto End;
+                        }
+
+                    End:
+                        if (dcount == allnums[j].Count - 1)
+                        {
+                            descending = true;
+                        }
+
+                        if (acount == allnums[j].Count - 1)
+                        {
+                            descending = true;
+                        }
+                    }
+
+                    if (ascending == true)
+                    {
+                        Console.WriteLine("The numbers are in ascending order");
+                    }
+
+                    else if (descending == true)
+                    {
+                        Console.WriteLine("The numbers are in descending order");
+                    }
+
+                    else
+                        Console.WriteLine("The numbers are in random order");
+                }
+            }
         }
     }
 }
