@@ -12,7 +12,9 @@ namespace AlgorithmsPractice
         static void Main(string[] args)
         {
             //Prob1();
-            Prob2();
+            //Prob2();
+            //Prob3();
+            Prob4();
         }
 
         public static void Prob1()
@@ -84,8 +86,11 @@ namespace AlgorithmsPractice
         public static void Prob2()
         {
             List<List<int>> allnums = new List<List<int>>();
+            List<string> lstrings = new List<string>();
+            List<int> lcounts = new List<int>();
+
             string path1 = AppDomain.CurrentDomain.BaseDirectory + @"Prob02.in_.txt";
-            bool valid = true;
+
             bool ascending = false;
             bool descending = false;
 
@@ -95,7 +100,8 @@ namespace AlgorithmsPractice
 
                 while ((line = sr.ReadLine()) != null)
                 {
-                    List<string> lstrings = line.Split(' ').ToList();
+                    lstrings = line.Split(' ').ToList();
+                    lcounts.Add(lstrings.Count);
                     List<int> nums = new List<int>();
 
                     for (int i = 0; i < lstrings.Count; i++)
@@ -106,67 +112,174 @@ namespace AlgorithmsPractice
                         {
                             nums.Add(result);
                         }
-                        else
-                        {
-                            valid = false;
-                            break;
-                        }
                     }
 
-                    if (valid == true)
-                    {
-                        for (int i = 0; i < allnums.Count; i++)
-                        {
-                            allnums.Add(allnums[i]);
-                        }
-                    }
-                    else
-                        Console.WriteLine("The input was invalid");
+                    allnums.Add(nums);
                 }
+            }
 
-                for (int j = 0; j < allnums.Count; j++)
+            for (int j = 0; j < allnums.Count; j++)
+            {
+                int dcount = 0;
+                int acount = 0;
+                bool temp = false;
+
+                for (int k = 0; k < allnums[j].Count - 1; k++)
                 {
-                    for (int k = 0; k < allnums[j].Count - 1; k++)
+                    if (allnums[j][k] > allnums[j][k + 1])
                     {
-                        int dcount = 0;
-                        int acount = 0;
+                        dcount++;
+                        temp = false;
+                    }
 
-                        if (allnums[j][k] > allnums[j][k + 1])
-                        {
-                            dcount++;
-                            goto End;
-                        }
+                    if (allnums[j][k] < allnums[j][k + 1])
+                    {
+                        acount++;
+                        temp = true;
+                    }
 
-                        if (allnums[j][k] < allnums[j][k + 1])
+                    if (allnums[j][k] == allnums[j][k + 1])
+                    {
+                        if (temp == true)
                         {
                             acount++;
-                            goto End;
                         }
 
-                    End:
-                        if (dcount == allnums[j].Count - 1)
+                        if (temp == false)
                         {
-                            descending = true;
-                        }
-
-                        if (acount == allnums[j].Count - 1)
-                        {
-                            descending = true;
+                            dcount++;
                         }
                     }
 
-                    if (ascending == true)
+                    if (dcount == allnums[j].Count - 1)
                     {
-                        Console.WriteLine("The numbers are in ascending order");
+                        descending = true;
                     }
 
-                    else if (descending == true)
+                    if (acount == allnums[j].Count - 1)
                     {
-                        Console.WriteLine("The numbers are in descending order");
+                        ascending = true;
                     }
+                }
 
-                    else
-                        Console.WriteLine("The numbers are in random order");
+                if (lcounts[j] != allnums[j].Count)
+                {
+                    Console.WriteLine("The input was invalid");
+                    ascending = false;
+                    descending = false;
+                    goto End;
+                }
+
+                if (ascending == true)
+                {
+                    Console.WriteLine("The numbers are in ascending order");
+                    ascending = false;
+                }
+
+                else if (descending == true)
+                {
+                    Console.WriteLine("The numbers are in descending order");
+                    descending = false;
+                }
+
+                else
+                    Console.WriteLine("The numbers are in random order");
+                End:
+                continue;
+            }
+
+        }
+
+        public static void Prob3()
+        {
+            List<List<string>> AllStrings = new List<List<string>>();
+            List<string> allstrings2 = new List<string>();
+            List<char> key = new List<char>();
+
+            string path1 = AppDomain.CurrentDomain.BaseDirectory + @"Prob03.in_.txt";
+
+            using (StreamReader sr = new StreamReader(path1))
+            {
+                string line;
+                key = sr.ReadLine().ToCharArray().ToList();
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    allstrings2 = line.Split(' ').ToList();
+                    AllStrings.Add(allstrings2);
+                }
+            }
+
+            for (int i = 0; i < AllStrings.Count; i++)
+            {
+                for (int j = 0; j <  AllStrings[i].Count; j++)
+                {
+                    List<string> allstrings3 = new List<string>();
+                    allstrings3.AddRange(AllStrings[i][j].Split('-').ToList());
+
+                    for (int k = 0; k < allstrings3.Count; k++)
+                    {
+                        Console.Write(key[int.Parse(allstrings3[k]) - 1]);
+                    }
+                    Console.Write(" ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static void Prob4()
+        {
+            List<int> ints = new List<int>();
+            int total = 1;
+            string path1 = AppDomain.CurrentDomain.BaseDirectory + @"Prob04.in_.txt";
+
+            using (StreamReader sr = new StreamReader(path1))
+            {
+                string line;
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    ints.Add(int.Parse(line));
+                }
+            }
+
+            int start = 1;
+
+            for (int i = 0; i < ints.Count; i++)
+            {
+                for (int j = start - 1; j < ints[i]; j++)
+                {
+                    total = total * start * (j + 1);
+                }
+                Console.WriteLine(total);
+                total = 1;
+            }
+        }
+
+        public static void Prob5()
+        {
+            List<List<List<string>>> alltests = new List<List<List<string>>>();
+            List<int> studentNums = new List<int>();
+            string path1 = AppDomain.CurrentDomain.BaseDirectory + @"Prob05.in_.txt";
+
+            using (StreamReader sr = new StreamReader(path1))
+            {
+                string line;
+                int value = int.Parse(sr.ReadLine());
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    List<List<string>> test = new List<List<string>>();
+                    List<string> questions = new List<string>();
+
+                    if (line.Contains("S"))
+                    {
+                        studentNums.Add(int.Parse(line[line.Length].ToString()));
+                        test.Add(questions);
+                        alltests.Add(test);
+                    }
+                    
+                    questions.Add(sr.ReadLine());
                 }
             }
         }
