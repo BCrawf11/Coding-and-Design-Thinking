@@ -14,7 +14,8 @@ namespace AlgorithmsPractice
             //Prob1();
             //Prob2();
             //Prob3();
-            Prob4();
+            //Prob4();
+            Prob5();
         }
 
         public static void Prob1()
@@ -258,28 +259,42 @@ namespace AlgorithmsPractice
 
         public static void Prob5()
         {
-            List<List<List<string>>> alltests = new List<List<List<string>>>();
+            List<List<string>> tests = new List<List<string>>();
             List<int> studentNums = new List<int>();
+            List<string> key = new List<string>();
+            int value;
+
             string path1 = AppDomain.CurrentDomain.BaseDirectory + @"Prob05.in_.txt";
 
             using (StreamReader sr = new StreamReader(path1))
             {
                 string line;
-                int value = int.Parse(sr.ReadLine());
+                value = int.Parse(sr.ReadLine());
+
+                //adds the key as a separate list
+                while (!(line = sr.ReadLine()).Contains("STUDENT"))
+                {
+                    key.Add(line.Replace(" ", ""));
+                }
+
+                if (line.Contains("STUDENT"))
+                {
+                    studentNums.Add(int.Parse(line.Replace("STUDENT ", "")));
+                }
 
                 while ((line = sr.ReadLine()) != null)
                 {
-                    List<List<string>> test = new List<List<string>>();
                     List<string> questions = new List<string>();
+                    questions.Add(line.Replace(" ", ""));
+                }
+            }
 
-                    if (line.Contains("S"))
-                    {
-                        studentNums.Add(int.Parse(line[line.Length].ToString()));
-                        test.Add(questions);
-                        alltests.Add(test);
-                    }
-                    
-                    questions.Add(sr.ReadLine());
+            for (int i = 0; i < tests.Count; i++)
+            {
+                for (int j = 0; j < tests[i].Count; j++)
+                {
+                    Console.Write(tests[i]);
+                    Console.Write("This code is being called. " + value);
                 }
             }
         }
