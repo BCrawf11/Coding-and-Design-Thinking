@@ -213,7 +213,7 @@ namespace AlgorithmsPractice
 
             for (int i = 0; i < AllStrings.Count; i++)
             {
-                for (int j = 0; j <  AllStrings[i].Count; j++)
+                for (int j = 0; j < AllStrings[i].Count; j++)
                 {
                     List<string> allstrings3 = new List<string>();
                     allstrings3.AddRange(AllStrings[i][j].Split('-').ToList());
@@ -262,6 +262,9 @@ namespace AlgorithmsPractice
             List<List<string>> tests = new List<List<string>>();
             List<int> studentNums = new List<int>();
             List<string> key = new List<string>();
+            bool correct;
+            int ccount = 0;
+            int score = 0;
             int value;
 
             string path1 = AppDomain.CurrentDomain.BaseDirectory + @"Prob05.in_.txt";
@@ -277,25 +280,48 @@ namespace AlgorithmsPractice
                     key.Add(line.Replace(" ", ""));
                 }
 
-                if (line.Contains("STUDENT"))
-                {
-                    studentNums.Add(int.Parse(line.Replace("STUDENT ", "")));
-                }
+                AddStudent:
+                studentNums.Add(int.Parse(line.Replace("STUDENT ", "")));
+                List<string> questions = new List<string>();
 
+                //adds all of the normal tests
                 while ((line = sr.ReadLine()) != null)
                 {
-                    List<string> questions = new List<string>();
+                    if (line.Contains("STUDENT"))
+                    {
+                        tests.Add(questions);
+                        goto AddStudent;
+                    }
+
                     questions.Add(line.Replace(" ", ""));
                 }
+
+                tests.Add(questions);
             }
 
             for (int i = 0; i < tests.Count; i++)
             {
                 for (int j = 0; j < tests[i].Count; j++)
                 {
-                    Console.Write(tests[i]);
-                    Console.Write("This code is being called. " + value);
+                    correct = true;
+
+                    for (int k = 0; k < tests[i][j].Length; k++)
+                    {
+                        if (tests[i][j][k] != key[j][k])
+                        {
+                            correct = false;
+                        }
+                    }
+
+                    if (correct == true)
+                    {
+                        ccount++;
+                    }
                 }
+
+                score = ccount * value;
+                Console.WriteLine("STUDENT " + studentNums[i] + ": " + score);
+                ccount = 0;
             }
         }
     }
