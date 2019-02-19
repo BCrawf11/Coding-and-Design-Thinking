@@ -56,9 +56,7 @@ public class Ship : MonoBehaviour {
     void ShootBalls()
     {
         GameObject newBullet = Instantiate(BulletPrefab);
-        newBullet.GetComponent<Bullet>().Initialize(transform.position + .3f * (Direction(transform.eulerAngles.z - 90).normalized),
-            Direction(transform.eulerAngles.z - 90));
-
+        newBullet.GetComponent<Bullet>().Initialize(transform.position, Vector3.right);
         bullets.Add(newBullet);
     }
 }

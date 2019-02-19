@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
 
     public void Initialize(Vector3 position, Vector3 velocity)
     {
-        this.transform.position = position;
+        transform.position = position;
         this.velocity = velocity;
         GetComponent<Rigidbody2D>().velocity = velocity * speed;
     }
