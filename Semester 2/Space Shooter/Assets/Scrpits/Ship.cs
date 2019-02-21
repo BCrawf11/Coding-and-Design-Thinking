@@ -3,22 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Ship : MonoBehaviour {
-
-    List<GameObject> bullets = new List<GameObject>();
-    float speed = 7f;
+public class Ship : MonoBehaviour
+{
+    public List<Vector3> teleportLocations = new List<Vector3>();
+    public static int lives = 3;
+    float speed = 7;
+    float timer = 0;
+    float timeToAction = 2;
     Vector3 velocity;
     Rigidbody2D rbody;
     public GameObject BulletPrefab;
+    public GameObject EnemyPrefab;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
         velocity = new Vector3(0, 0, 0);
 
@@ -33,9 +37,28 @@ public class Ship : MonoBehaviour {
 
         rbody.velocity = velocity * (speed);
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             ShootBalls();
+        }
+
+        timer += Time.deltaTime;
+
+        if (timer >= timeToAction)
+        {
+            SpawnEnemy();
+
+            if (timeToAction > 1f)
+            {
+                timeToAction -= 0.05f;
+            }
+
+            timer = 0;
+        }
+
+        if (lives == 0)
+        {
+            SceneManager.LoadScene("Game Over");
         }
     }
 
@@ -44,11 +67,10 @@ public class Ship : MonoBehaviour {
         return new Vector3(Mathf.Cos(eulerAnglesZ * Mathf.Deg2Rad), Mathf.Sin(eulerAnglesZ * Mathf.Deg2Rad), 0);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D (Collider2D collider)
     {
-        if (collision.collider.tag == "Bullet")
+        if (collider.tag == "Enemy")
         {
-            Destroy(collision.collider.gameObject);
             SceneManager.LoadScene("Game Over");
         }
     }
@@ -57,6 +79,11 @@ public class Ship : MonoBehaviour {
     {
         GameObject newBullet = Instantiate(BulletPrefab);
         newBullet.GetComponent<Bullet>().Initialize(transform.position, Vector3.right);
-        bullets.Add(newBullet);
+    }
+
+    void SpawnEnemy()
+    {
+        GameObject newEnemy = Instantiate(EnemyPrefab);
+        newEnemy.GetComponent<Enemy>().Initialize(teleportLocations[Random.Range(0, teleportLocations.Count)], Vector3.left);
     }
 }

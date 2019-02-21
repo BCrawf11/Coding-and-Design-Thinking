@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    float timer = 0;
-    float timeToAction = 5;
     public Vector3 velocity = new Vector3(0, 0, 0);
-    public GameObject BulletPrefab;
-    float speed = 3f;
+    Rigidbody2D rbody;
+    float timer = 0;
+    float timeToAction = 4;
+    float speed = 10f;
 
     // Use this for initialization
     void Start()
     {
-        //velocity = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+        rbody = GetComponent<Rigidbody2D>();
     }
 
     /// <summary>
@@ -21,8 +21,8 @@ public class Bullet : MonoBehaviour
     /// </summary>
     /// <param name="position">Position to spawn</param>
     /// <param name="velocity">Direction * speed</param>
-    /// <param name="color">Color of the ball</param>
     /// 
+
     void Update()
     {
         timer += Time.deltaTime;
@@ -32,13 +32,23 @@ public class Bullet : MonoBehaviour
             DestroyImmediate(gameObject);
             timer = 0;
         }
+
+        rbody.velocity = velocity * speed;
+    }
+
+    private void OnTriggerEnter2D (Collider2D collider)
+    {
+        if (collider.tag == "Enemy")
+        {
+            Destroy(gameObject);
+            Destroy(collider.gameObject);
+        }
     }
 
     public void Initialize(Vector3 position, Vector3 velocity)
     {
         transform.position = position;
         this.velocity = velocity;
-        GetComponent<Rigidbody2D>().velocity = velocity * speed;
     }
 }
 

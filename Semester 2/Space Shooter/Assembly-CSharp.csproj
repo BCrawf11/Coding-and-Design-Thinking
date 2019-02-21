@@ -62,12 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scrpits\Bullet.cs" />
+    <Compile Include="Assets\Scrpits\Enemy.cs" />
     <Compile Include="Assets\Scrpits\Ship.cs" />
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/166097/Documents/Junior-Year-Coding-Class/Semester 2/Space Shooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/166097/Documents/Junior-Year-Coding-Class/Semester 2/Space Shooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>C:/Users/166097/Documents/Junior-Year-Coding-Class/Semester 2/Space Shooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
