@@ -103,7 +103,7 @@ namespace Sudoku
             //checks all of the rows and 0
             for (int i = 0; i < 9; i++)
             {
-                int sum1 = 0;
+                List<int> temp = new List<int>();
 
                 for (int j = 0; j < 9; j++)
                 {
@@ -112,56 +112,65 @@ namespace Sudoku
                         return false;
                     }
 
-                    Board[i, j] += sum1;
+                    temp.Add(Board[i, j]);
                 }
 
-                if (sum1 != 45)
+                temp = temp.OrderBy(t => t).ToList();
+
+                for (int k = 0; k < temp.Count; k++)
                 {
-                    return false;
+                    if (temp[i] != i + 1)
+                    {
+                        return false;
+                    }
                 }
             }
 
             //checks all of the columns
             for (int i = 0; i < 9; i++)
             {
-                int sum2 = 0;
+                List<int> temp = new List<int>();
 
                 for (int j = 0; j < 9; j++)
                 {
-                    Board[j, i] += sum2;
+                    temp.Add(Board[j, i]);
                 }
 
-                if (sum2 != 45)
+                temp = temp.OrderBy(t => t).ToList();
+
+                for (int j = 0; j < temp.Count; j++)
                 {
-                    return false;
+                    if (temp[i] != i + 1)
+                    {
+                        return false;
+                    }
                 }
             }
 
             //checks all of the squares
-
-            //goes through just one of the squares
-            //(int j = i - (i % 3); j < j + 3; j++)
-
-            int sum3 = 0;
-
-            //need to modify this code
             for (int i = 0; i < 9; i++)
             {
-                for (int j = 0; j < 3; j++)
+                List<int> temp = new List<int>();
+
+                for (int j = i - (i % 3); j < i - (i % 3) + 3; j++)
                 {
-                    for (int k = 0; k < 3; k++)
+                    for (int k = i - (i % 3); k < i - (i % 3) + 3; k++)
                     {
-                        Board[j, k] += sum3;
+                        temp.Add(Board[j, k]);
                     }
                 }
 
-                if (sum3 != 45)
+                temp = temp.OrderBy(t => t).ToList();
+
+                for (int j = 0; j < temp.Count; j++)
                 {
-                    return false;
+                    if (temp[i] != i + 1)
+                    {
+                        return false;
+                    }
                 }
             }
 
-            //take out when back on Visual Studio
             return true;
 
             //Check all columns in the board, make sure they contain ONLY values 1-9. No duplicates, no exclusions
@@ -190,20 +199,62 @@ namespace Sudoku
         /// <param name="row">Index of the row we want to get results for</param>
         /// <param name="col">Index of the column we want to get the results for</param>
         /// <returns>List of valid integers for the given row and column</returns>
+        /// 
         public List<int> FindLegalDigits(int row, int col)
         {
-            throw new NotImplementedException();
+            List<int> incorrectNums = new List<int>();
+            List<int> correctNums = new List<int>();
 
-            //Create list of all possible digits (1-9)
+            //gets incorrect digits from the row
+            for (int i = 0; i < 9; i++)
+            {
+                if (Board[row, i] != 0 && col != i)
+                {
+                    incorrectNums.Add(Board[row, i]);
+                }
+            }
 
-            //Remove from the list all elements in the row
+            //gets incorrect digits from the column
+            for (int i = 0; i < 9; i++)
+            {
+                if (Board[i, col] != 0 && row != i)
+                {
+                    incorrectNums.Add(Board[i, col]);
+                }
+            }
 
-            //Remove from the list all elements in the column
+            //gets incorrect digits from the square
+            for (int j = row - (row % 3); j < row - (row % 3) + 3; j++)
+            {
+                for (int k = col - (col % 3); k < col - (col % 3) + 3; k++)
+                {
+                    if (Board[j, k] != 0 && Board[j, k] != Board[row, col]) //test will fail, but technically valid
+                    {
+                        incorrectNums.Add(Board[j, k]);
+                    }
+                }
+            }
 
-            //remove from the list all elements in the box
+            for (int i = 1; i < 10; i++)
+            {
+                if (!incorrectNums.Contains(i))
+                {
+                    correctNums.Add(i);
+                }
+            }
 
-            //return the list
+            return correctNums;
         }
+
+        //Create list of all possible digits (1-9)
+
+        //Remove from the list all elements in the row
+
+        //Remove from the list all elements in the column
+
+        //remove from the list all elements in the box
+
+        //return the list
 
         /// <summary>
         /// Prints out the sudoku board in an easily understandable way
@@ -219,7 +270,7 @@ namespace Sudoku
                     Console.WriteLine("  ----------+---------+--------");
                 }
                 Console.Write(row + "|");
-                for(int col = 0; col < 9; col++)
+                for (int col = 0; col < 9; col++)
                 {
                     if (col % 3 == 0 && col != 0)
                     {
@@ -239,6 +290,7 @@ namespace Sudoku
                 Console.WriteLine();
             }
         }
+
 
         /// <summary>
         /// Applies a value to a board in the given row and column
@@ -264,3 +316,4 @@ namespace Sudoku
         }
     }
 }
+

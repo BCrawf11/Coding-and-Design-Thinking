@@ -144,9 +144,9 @@ namespace Sudoku
         {
             int row, col;
         GetRow:
-            Console.WriteLine("Enter the row that you want to check (1-9)");
+            Console.WriteLine("Enter the row that you want to check (0-8)");
             int userInput;
-            if (!int.TryParse(Console.ReadLine(), out userInput) || userInput < 1 || userInput > 9)
+            if (!int.TryParse(Console.ReadLine(), out userInput) || userInput < 0 || userInput > 8)
             {
                 Console.WriteLine("You have entered an incorrect input. Please try again.");
 
@@ -155,8 +155,8 @@ namespace Sudoku
             row = userInput;
 
         GetCol:
-            Console.WriteLine("Enter the col that you want to place (1-9)");
-            if (!int.TryParse(Console.ReadLine(), out userInput) || userInput < 1 || userInput > 9)
+            Console.WriteLine("Enter the col that you want to check (0-8)");
+            if (!int.TryParse(Console.ReadLine(), out userInput) || userInput < 0 || userInput > 8)
             {
                 Console.WriteLine("You have entered an incorrect input. Please try again.");
 
@@ -165,7 +165,8 @@ namespace Sudoku
             col = userInput;
 
             Console.WriteLine();
-            foreach (int validVal in board.FindLegalDigits(row - 1, col - 1))
+
+            foreach (int validVal in board.FindLegalDigits(row, col))
             {
                 Console.WriteLine(validVal + " is a legal digit for row " + row + " and column " + col);
             }
