@@ -181,8 +181,24 @@ namespace Sudoku
         /// <returns>True if the board was solved, false otherwise.</returns>
         public static bool SolveBoardIterativelyWithQueue(ref SudokuBoard board)
         {
-            Queue<SudokuBoard> boards = new Queue<SudokuBoard>();
-            throw new NotImplementedException();
+            Stack<SudokuBoard> boards = new Stack<SudokuBoard>();
+            boards.Push(board);
+
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                { 
+                if (boards[i, j] == 0)
+                {
+
+
+                }
+            }
+
+            while (boards.Count != 0)
+            {
+                boards.Push(board);
+            }
 
             //As long as there is a board in the queue, do the following:
                 //dequeue from the queue and store the returned value

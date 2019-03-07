@@ -22,6 +22,8 @@ namespace Sudoku
 
         }
 
+        public int Count { get { return queue.Count; } }
+
         /// <summary>
         /// Enqueues a new board to the back of the queue.
         /// </summary>
@@ -41,8 +43,8 @@ namespace Sudoku
         public T Dequeue()
         {
             timesDequeued++;
-            T retVal = queue[queue.Count - 1];
-            queue.RemoveAt(queue.Count - 1);
+            T retVal = queue[0];
+            queue.RemoveAt(0);
             return retVal;
         }
 

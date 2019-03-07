@@ -83,6 +83,15 @@ namespace Sudoku
             }
         }
 
+        /// <summary>
+        /// Copy constructor for the sudokyu board class
+        /// </summary>
+        /// <param name="board"> board to copy </param>
+
+        public SudokuBoard (SudokuBoard board)
+        {
+            Array.Copy(board.Board, this.Board, this.Board.Length);
+        }
 
         /// <summary>
         /// Checks the entire board to see if it is valid or not.
