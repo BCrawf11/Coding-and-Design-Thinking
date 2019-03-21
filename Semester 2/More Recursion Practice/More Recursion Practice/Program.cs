@@ -12,17 +12,20 @@ namespace More_Recursion_Practice
         static void Main(string[] args)
         {
             List<int> integers = new List<int>();
+
             for (int i = 0; i < 1000; i++)
             {
                 integers.Add(rand.Next(0, 1000));
                 integers.Sort();
-                bool result = SearchIntList(integers, 0);
             }
+
+            bool result = SearchIntList(integers, 11);
+            Console.WriteLine(result);
         }
 
         public static bool SearchIntList(List<int> integers, int n)
         {
-            return SearchIntListRecursive(integers, n, 0, integers.Count - 1);
+            return SearchIntListRecursive(integers, n, 0, integers.Count);
         }
 
         private static bool SearchIntListRecursive(List<int> integers, int n, int lowerBound, int upperBound)
@@ -30,19 +33,19 @@ namespace More_Recursion_Practice
             if (lowerBound == upperBound)
                 return false;
 
-            int midpoint = upperBound / 2;
+            int midpoint = ((upperBound - lowerBound) / 2) + lowerBound;
 
             if (integers[midpoint] == n)
                 return true;
 
-            if (lowerBound + 1 == upperBound || lowerBound - 1 == upperBound)
+            if (upperBound - lowerBound == 1)
                 return false;
 
-            if (midpoint > n)
-                SearchIntListRecursive(integers, n, lowerBound, midpoint);
+            if (integers[midpoint] > n)
+                return SearchIntListRecursive(integers, n, lowerBound, midpoint);
 
-            if (midpoint < n)
-                SearchIntListRecursive(integers, n, midpoint, upperBound);
+            if (integers[midpoint] < n)
+                return SearchIntListRecursive(integers, n, midpoint, upperBound);
 
             return false;
         }

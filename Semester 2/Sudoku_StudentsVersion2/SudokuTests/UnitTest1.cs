@@ -14,7 +14,7 @@ namespace SudokuTests
             try
             {
                 SudokuBoard board = new SudokuBoard();
-                if (Program.SolveBoardIterativelyWithQueue(ref board))
+                if (Program.SolveBoardIterativelyWithStack(ref board))
                 {
                     if (!board.VerifyBoard())
                     {

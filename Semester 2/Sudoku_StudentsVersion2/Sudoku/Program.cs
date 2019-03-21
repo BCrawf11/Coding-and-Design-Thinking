@@ -47,7 +47,7 @@ namespace Sudoku
                         Console.ReadKey();
                         break;
                     case 4:
-                        if (SolveBoardIterativelyWithQueue(ref board))
+                        if (SolveBoardIterativelyWithStack(ref board))
                         {
                             Console.WriteLine("The board was solved successfully!");
                             board.PrintBoard();
@@ -64,7 +64,7 @@ namespace Sudoku
                         userInput = 5;
                         break;
                     case 5:
-                        Console.WriteLine("Thanks for playing");
+                        Console.WriteLine("Thanks for playing!");
                         break;
                 }
                 Console.Clear();
@@ -179,34 +179,66 @@ namespace Sudoku
         /// </summary>
         /// <param name="board">The board to solve</param>
         /// <returns>True if the board was solved, false otherwise.</returns>
-        public static bool SolveBoardIterativelyWithQueue(ref SudokuBoard board)
+        public static bool SolveBoardIterativelyWithStack(ref SudokuBoard board)
         {
             Stack<SudokuBoard> boards = new Stack<SudokuBoard>();
             boards.Push(board);
 
-            for (int i = 0; i < 9; i++)
-            {
-                for (int j = 0; j < 9; j++)
-                { 
-                if (boards[i, j] == 0)
-                {
-
-
-                }
-            }
-
             while (boards.Count != 0)
             {
-                boards.Push(board);
+                SudokuBoard temp = boards.Pop();
+
+                if (temp.VerifyBoard() == true)
+                {
+                    board = temp;
+                    return true;
+                }
+
+                List<int> legalDigits = new List<int>();
+
+                int index1 = 0;
+                int index2 = 0;
+                bool hasrun = false;
+
+                for (int i = 0; i < 9; i++)
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        if (temp.Board[i, j] == 0)
+                        {
+                            index1 = i;
+                            index2 = j;
+                            legalDigits = temp.FindLegalDigits(index1, index2);
+                            hasrun = true;
+                        }
+
+                        if (hasrun)
+                        {
+                            break;
+                        }
+                    }
+                    if (hasrun)
+                    {
+                        break;
+                    }
+                }
+
+                for (int i = 0; i < legalDigits.Count; i++)
+                {
+                    SudokuBoard newboard = new SudokuBoard(temp);
+                    newboard.Board[index1, index2] = legalDigits[i];
+                    boards.Push(newboard);
+                }
+                    //As long as there is a board in the queue, do the following:
+                    //dequeue from the queue and store the returned value
+                    //if the returned value is complete
+                    //apply board to our ref parameter and return true
+                    //Find the first blank space "0" on the board
+                    //FindLegalDigits() on that space
+                    //Enqueue a new board for each legal digit found (make sure to put that digit on the new board!)
             }
 
-            //As long as there is a board in the queue, do the following:
-                //dequeue from the queue and store the returned value
-                //if the returned value is complete
-                    //apply board to our ref parameter and return true
-                //Find the first blank space "0" on the board
-                    //FindLegalDigits() on that space
-                        //Enqueue a new board for each legal digit found (make sure to put that digit on the new board!)
+            return false;
         }
     }
 }

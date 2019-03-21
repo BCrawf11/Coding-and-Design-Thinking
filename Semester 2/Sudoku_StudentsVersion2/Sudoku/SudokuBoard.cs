@@ -18,7 +18,7 @@ namespace Sudoku
         /// <summary>
         /// The data structure used to hold board data.
         /// </summary>
-        public int[,] Board { get; set; }
+        public int[,] Board { get; set; } = new int[9, 9];
 
         //path of the file to randomly generate boards.
         string path = AppDomain.CurrentDomain.BaseDirectory + @"HardPuzzles.txt";
