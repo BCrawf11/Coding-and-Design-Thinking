@@ -1,0 +1,14 @@
+C:\Users\166097\source\repos\Palindrome Checker\Palindrome Checker\bin\Debug\Palindrome Checker.exe.config
+C:\Users\166097\source\repos\Palindrome Checker\Palindrome Checker\bin\Debug\Palindrome Checker.exe
+C:\Users\166097\source\repos\Palindrome Checker\Palindrome Checker\bin\Debug\Palindrome Checker.pdb
+C:\Users\166097\source\repos\Palindrome Checker\Palindrome Checker\obj\Debug\Palindrome Checker.csprojAssemblyReference.cache
+C:\Users\166097\source\repos\Palindrome Checker\Palindrome Checker\obj\Debug\Palindrome Checker.csproj.CoreCompileInputs.cache
+C:\Users\166097\source\repos\Palindrome Checker\Palindrome Checker\obj\Debug\Palindrome Checker.exe
+C:\Users\166097\source\repos\Palindrome Checker\Palindrome Checker\obj\Debug\Palindrome Checker.pdb
+C:\Users\166097\OneDrive - Academy District 20\Palindrome Checker\Palindrome Checker\bin\Debug\Palindrome Checker.exe.config
+C:\Users\166097\OneDrive - Academy District 20\Palindrome Checker\Palindrome Checker\bin\Debug\Palindrome Checker.exe
+C:\Users\166097\OneDrive - Academy District 20\Palindrome Checker\Palindrome Checker\bin\Debug\Palindrome Checker.pdb
+C:\Users\166097\OneDrive - Academy District 20\Palindrome Checker\Palindrome Checker\obj\Debug\Palindrome Checker.csprojAssemblyReference.cache
+C:\Users\166097\OneDrive - Academy District 20\Palindrome Checker\Palindrome Checker\obj\Debug\Palindrome Checker.csproj.CoreCompileInputs.cache
+C:\Users\166097\OneDrive - Academy District 20\Palindrome Checker\Palindrome Checker\obj\Debug\Palindrome Checker.exe
+C:\Users\166097\OneDrive - Academy District 20\Palindrome Checker\Palindrome Checker\obj\Debug\Palindrome Checker.pdb

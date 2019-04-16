@@ -1,0 +1,7 @@
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CodeQuest\CQProb3\CQProb3\bin\Debug\CQProb3.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CodeQuest\CQProb3\CQProb3\bin\Debug\CQProb3.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CodeQuest\CQProb3\CQProb3\bin\Debug\CQProb3.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CodeQuest\CQProb3\CQProb3\obj\Debug\CQProb3.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CodeQuest\CQProb3\CQProb3\obj\Debug\CQProb3.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CodeQuest\CQProb3\CQProb3\obj\Debug\CQProb3.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CodeQuest\CQProb3\CQProb3\obj\Debug\CQProb3.pdb

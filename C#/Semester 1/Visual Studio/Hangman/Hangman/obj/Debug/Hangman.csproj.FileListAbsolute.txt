@@ -1,0 +1,14 @@
+C:\Users\166097\OneDrive - Academy District 20\Hangman\Hangman\bin\Debug\Hangman.exe.config
+C:\Users\166097\OneDrive - Academy District 20\Hangman\Hangman\bin\Debug\Hangman.exe
+C:\Users\166097\OneDrive - Academy District 20\Hangman\Hangman\bin\Debug\Hangman.pdb
+C:\Users\166097\OneDrive - Academy District 20\Hangman\Hangman\obj\Debug\Hangman.csprojAssemblyReference.cache
+C:\Users\166097\OneDrive - Academy District 20\Hangman\Hangman\obj\Debug\Hangman.csproj.CoreCompileInputs.cache
+C:\Users\166097\OneDrive - Academy District 20\Hangman\Hangman\obj\Debug\Hangman.exe
+C:\Users\166097\OneDrive - Academy District 20\Hangman\Hangman\obj\Debug\Hangman.pdb
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Hangman\Hangman\bin\Debug\Hangman.exe.config
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Hangman\Hangman\bin\Debug\Hangman.exe
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Hangman\Hangman\bin\Debug\Hangman.pdb
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Hangman\Hangman\obj\Debug\Hangman.csprojAssemblyReference.cache
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Hangman\Hangman\obj\Debug\Hangman.csproj.CoreCompileInputs.cache
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Hangman\Hangman\obj\Debug\Hangman.exe
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Hangman\Hangman\obj\Debug\Hangman.pdb

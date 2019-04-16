@@ -1,0 +1,7 @@
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\More Recursion Practice\More Recursion Practice\bin\Debug\More Recursion Practice.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\More Recursion Practice\More Recursion Practice\bin\Debug\More Recursion Practice.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\More Recursion Practice\More Recursion Practice\bin\Debug\More Recursion Practice.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\More Recursion Practice\More Recursion Practice\obj\Debug\More Recursion Practice.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\More Recursion Practice\More Recursion Practice\obj\Debug\More Recursion Practice.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\More Recursion Practice\More Recursion Practice\obj\Debug\More Recursion Practice.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\More Recursion Practice\More Recursion Practice\obj\Debug\More Recursion Practice.pdb

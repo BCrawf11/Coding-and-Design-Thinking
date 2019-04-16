@@ -1,0 +1,7 @@
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\LINQ\LINQ\bin\Debug\LINQ.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\LINQ\LINQ\bin\Debug\LINQ.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\LINQ\LINQ\bin\Debug\LINQ.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\LINQ\LINQ\obj\Debug\LINQ.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\LINQ\LINQ\obj\Debug\LINQ.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\LINQ\LINQ\obj\Debug\LINQ.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\LINQ\LINQ\obj\Debug\LINQ.pdb

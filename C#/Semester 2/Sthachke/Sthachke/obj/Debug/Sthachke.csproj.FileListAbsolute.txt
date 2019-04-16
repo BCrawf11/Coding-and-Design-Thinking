@@ -1,0 +1,7 @@
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sthachke\Sthachke\bin\Debug\Sthachke.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sthachke\Sthachke\bin\Debug\Sthachke.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sthachke\Sthachke\bin\Debug\Sthachke.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sthachke\Sthachke\obj\Debug\Sthachke.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sthachke\Sthachke\obj\Debug\Sthachke.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sthachke\Sthachke\obj\Debug\Sthachke.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sthachke\Sthachke\obj\Debug\Sthachke.pdb

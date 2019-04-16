@@ -1,0 +1,14 @@
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\PrintJaggedArray\PrintJaggedArray\obj\Debug\PrintJaggedArray.csprojAssemblyReference.cache
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\PrintJaggedArray\PrintJaggedArray\obj\Debug\PrintJaggedArray.csproj.CoreCompileInputs.cache
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\PrintJaggedArray\PrintJaggedArray\bin\Debug\PrintJaggedArray.exe.config
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\PrintJaggedArray\PrintJaggedArray\bin\Debug\PrintJaggedArray.exe
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\PrintJaggedArray\PrintJaggedArray\bin\Debug\PrintJaggedArray.pdb
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\PrintJaggedArray\PrintJaggedArray\obj\Debug\PrintJaggedArray.exe
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\PrintJaggedArray\PrintJaggedArray\obj\Debug\PrintJaggedArray.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\PrintJaggedArray\PrintJaggedArray\bin\Debug\PrintJaggedArray.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\PrintJaggedArray\PrintJaggedArray\bin\Debug\PrintJaggedArray.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\PrintJaggedArray\PrintJaggedArray\bin\Debug\PrintJaggedArray.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\PrintJaggedArray\PrintJaggedArray\obj\Debug\PrintJaggedArray.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\PrintJaggedArray\PrintJaggedArray\obj\Debug\PrintJaggedArray.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\PrintJaggedArray\PrintJaggedArray\obj\Debug\PrintJaggedArray.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\PrintJaggedArray\PrintJaggedArray\obj\Debug\PrintJaggedArray.pdb

@@ -1,0 +1,7 @@
+C:\Users\166097\OneDrive - Academy District 20\Arrays\Arrays\bin\Debug\Arrays.exe.config
+C:\Users\166097\OneDrive - Academy District 20\Arrays\Arrays\bin\Debug\Arrays.exe
+C:\Users\166097\OneDrive - Academy District 20\Arrays\Arrays\bin\Debug\Arrays.pdb
+C:\Users\166097\OneDrive - Academy District 20\Arrays\Arrays\obj\Debug\Arrays.csprojAssemblyReference.cache
+C:\Users\166097\OneDrive - Academy District 20\Arrays\Arrays\obj\Debug\Arrays.csproj.CoreCompileInputs.cache
+C:\Users\166097\OneDrive - Academy District 20\Arrays\Arrays\obj\Debug\Arrays.exe
+C:\Users\166097\OneDrive - Academy District 20\Arrays\Arrays\obj\Debug\Arrays.pdb

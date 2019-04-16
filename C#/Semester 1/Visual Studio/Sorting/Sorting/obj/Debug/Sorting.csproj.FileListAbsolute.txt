@@ -1,0 +1,7 @@
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\Sorting\Sorting\bin\Debug\Sorting.exe.config
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\Sorting\Sorting\bin\Debug\Sorting.exe
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\Sorting\Sorting\bin\Debug\Sorting.pdb
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\Sorting\Sorting\obj\Debug\Sorting.csprojAssemblyReference.cache
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\Sorting\Sorting\obj\Debug\Sorting.csproj.CoreCompileInputs.cache
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\Sorting\Sorting\obj\Debug\Sorting.exe
+C:\Users\166097\OneDrive - Academy District 20\Visual Studio\Sorting\Sorting\obj\Debug\Sorting.pdb

@@ -1,0 +1,7 @@
+C:\Users\166097\OneDrive - Academy District 20\BCrawford_Competency\BCrawford_Competency\bin\Debug\BCrawford_Competency.exe.config
+C:\Users\166097\OneDrive - Academy District 20\BCrawford_Competency\BCrawford_Competency\bin\Debug\BCrawford_Competency.exe
+C:\Users\166097\OneDrive - Academy District 20\BCrawford_Competency\BCrawford_Competency\bin\Debug\BCrawford_Competency.pdb
+C:\Users\166097\OneDrive - Academy District 20\BCrawford_Competency\BCrawford_Competency\obj\Debug\BCrawford_Competency.csprojAssemblyReference.cache
+C:\Users\166097\OneDrive - Academy District 20\BCrawford_Competency\BCrawford_Competency\obj\Debug\BCrawford_Competency.csproj.CoreCompileInputs.cache
+C:\Users\166097\OneDrive - Academy District 20\BCrawford_Competency\BCrawford_Competency\obj\Debug\BCrawford_Competency.exe
+C:\Users\166097\OneDrive - Academy District 20\BCrawford_Competency\BCrawford_Competency\obj\Debug\BCrawford_Competency.pdb

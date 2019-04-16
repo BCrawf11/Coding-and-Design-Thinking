@@ -1,0 +1,7 @@
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Writing\Stream Writing\bin\Debug\Stream Writing.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Writing\Stream Writing\bin\Debug\Stream Writing.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Writing\Stream Writing\bin\Debug\Stream Writing.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Writing\Stream Writing\obj\Debug\Stream Writing.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Writing\Stream Writing\obj\Debug\Stream Writing.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Writing\Stream Writing\obj\Debug\Stream Writing.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Writing\Stream Writing\obj\Debug\Stream Writing.pdb

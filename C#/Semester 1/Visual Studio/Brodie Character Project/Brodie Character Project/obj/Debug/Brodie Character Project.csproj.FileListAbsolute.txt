@@ -1,0 +1,7 @@
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Brodie Character Project\Brodie Character Project\bin\Debug\Brodie Character Project.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Brodie Character Project\Brodie Character Project\bin\Debug\Brodie Character Project.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Brodie Character Project\Brodie Character Project\bin\Debug\Brodie Character Project.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Brodie Character Project\Brodie Character Project\obj\Debug\Brodie Character Project.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Brodie Character Project\Brodie Character Project\obj\Debug\Brodie Character Project.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Brodie Character Project\Brodie Character Project\obj\Debug\Brodie Character Project.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Brodie Character Project\Brodie Character Project\obj\Debug\Brodie Character Project.pdb

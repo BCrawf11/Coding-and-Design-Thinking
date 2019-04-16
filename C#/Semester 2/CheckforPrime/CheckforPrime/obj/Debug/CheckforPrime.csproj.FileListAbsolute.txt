@@ -1,0 +1,7 @@
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CheckforPrime\CheckforPrime\bin\Debug\CheckforPrime.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CheckforPrime\CheckforPrime\bin\Debug\CheckforPrime.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CheckforPrime\CheckforPrime\bin\Debug\CheckforPrime.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CheckforPrime\CheckforPrime\obj\Debug\CheckforPrime.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CheckforPrime\CheckforPrime\obj\Debug\CheckforPrime.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CheckforPrime\CheckforPrime\obj\Debug\CheckforPrime.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\CheckforPrime\CheckforPrime\obj\Debug\CheckforPrime.pdb

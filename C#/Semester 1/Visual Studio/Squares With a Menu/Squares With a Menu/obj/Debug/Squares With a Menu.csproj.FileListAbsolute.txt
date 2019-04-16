@@ -1,0 +1,6 @@
+C:\Users\166097\OneDrive - Academy District 20\Squares With a Menu\Squares With a Menu\obj\Debug\Squares With a Menu.csproj.CoreCompileInputs.cache
+C:\Users\166097\OneDrive - Academy District 20\Squares With a Menu\Squares With a Menu\bin\Debug\Squares With a Menu.exe.config
+C:\Users\166097\OneDrive - Academy District 20\Squares With a Menu\Squares With a Menu\bin\Debug\Squares With a Menu.exe
+C:\Users\166097\OneDrive - Academy District 20\Squares With a Menu\Squares With a Menu\bin\Debug\Squares With a Menu.pdb
+C:\Users\166097\OneDrive - Academy District 20\Squares With a Menu\Squares With a Menu\obj\Debug\Squares With a Menu.exe
+C:\Users\166097\OneDrive - Academy District 20\Squares With a Menu\Squares With a Menu\obj\Debug\Squares With a Menu.pdb

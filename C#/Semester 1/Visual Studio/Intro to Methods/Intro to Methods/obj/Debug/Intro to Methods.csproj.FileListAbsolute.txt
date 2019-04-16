@@ -1,0 +1,7 @@
+C:\Users\166097\source\repos\Intro to Methods\Intro to Methods\bin\Debug\Intro to Methods.exe.config
+C:\Users\166097\source\repos\Intro to Methods\Intro to Methods\bin\Debug\Intro to Methods.exe
+C:\Users\166097\source\repos\Intro to Methods\Intro to Methods\bin\Debug\Intro to Methods.pdb
+C:\Users\166097\source\repos\Intro to Methods\Intro to Methods\obj\Debug\Intro to Methods.csprojAssemblyReference.cache
+C:\Users\166097\source\repos\Intro to Methods\Intro to Methods\obj\Debug\Intro to Methods.csproj.CoreCompileInputs.cache
+C:\Users\166097\source\repos\Intro to Methods\Intro to Methods\obj\Debug\Intro to Methods.exe
+C:\Users\166097\source\repos\Intro to Methods\Intro to Methods\obj\Debug\Intro to Methods.pdb

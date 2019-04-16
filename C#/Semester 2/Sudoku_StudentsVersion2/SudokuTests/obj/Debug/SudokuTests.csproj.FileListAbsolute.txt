@@ -1,0 +1,51 @@
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\bin\Debug\SudokuTests.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\bin\Debug\SudokuTests.pdb
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\bin\Debug\Sudoku.exe
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\bin\Debug\Sudoku.pdb
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\bin\Debug\Sudoku.exe.config
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\obj\Debug\SudokuTests.csprojAssemblyReference.cache
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\obj\Debug\SudokuTests.csproj.CoreCompileInputs.cache
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\obj\Debug\SudokuTests.csproj.CopyComplete
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\obj\Debug\SudokuTests.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku\SudokuTests\obj\Debug\SudokuTests.pdb
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\obj\Debug\SudokuTests.csprojAssemblyReference.cache
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\obj\Debug\SudokuTests.csproj.CoreCompileInputs.cache
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\obj\Debug\SudokuTests.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\obj\Debug\SudokuTests.pdb
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\bin\Debug\SudokuTests.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\bin\Debug\SudokuTests.pdb
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\bin\Debug\Sudoku.exe
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\bin\Debug\Sudoku.pdb
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\bin\Debug\Sudoku.exe.config
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\RYAN.DARRAS\OneDrive - Academy District 20\Semester 2\Projects\Sudoku_StudentsVersion\SudokuTests\obj\Debug\SudokuTests.csproj.CopyComplete
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\bin\Debug\SudokuTests.dll
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\bin\Debug\SudokuTests.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\bin\Debug\Sudoku.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\bin\Debug\Sudoku.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\bin\Debug\Sudoku.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\obj\Debug\SudokuTests.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\obj\Debug\SudokuTests.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\obj\Debug\SudokuTests.csproj.CopyComplete
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\obj\Debug\SudokuTests.dll
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\Sudoku_StudentsVersion2\SudokuTests\obj\Debug\SudokuTests.pdb

@@ -1,0 +1,13 @@
+C:\Users\166097\OneDrive - Academy District 20\Int Characters\Int Characters\bin\Debug\Int Characters.exe.config
+C:\Users\166097\OneDrive - Academy District 20\Int Characters\Int Characters\bin\Debug\Int Characters.exe
+C:\Users\166097\OneDrive - Academy District 20\Int Characters\Int Characters\bin\Debug\Int Characters.pdb
+C:\Users\166097\OneDrive - Academy District 20\Int Characters\Int Characters\obj\Debug\Int Characters.csproj.CoreCompileInputs.cache
+C:\Users\166097\OneDrive - Academy District 20\Int Characters\Int Characters\obj\Debug\Int Characters.exe
+C:\Users\166097\OneDrive - Academy District 20\Int Characters\Int Characters\obj\Debug\Int Characters.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 1\Visual Studio\Int Characters\Int Characters\bin\Debug\Int Characters.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 1\Visual Studio\Int Characters\Int Characters\bin\Debug\Int Characters.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 1\Visual Studio\Int Characters\Int Characters\bin\Debug\Int Characters.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 1\Visual Studio\Int Characters\Int Characters\obj\Debug\Int Characters.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 1\Visual Studio\Int Characters\Int Characters\obj\Debug\Int Characters.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 1\Visual Studio\Int Characters\Int Characters\obj\Debug\Int Characters.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 1\Visual Studio\Int Characters\Int Characters\obj\Debug\Int Characters.pdb

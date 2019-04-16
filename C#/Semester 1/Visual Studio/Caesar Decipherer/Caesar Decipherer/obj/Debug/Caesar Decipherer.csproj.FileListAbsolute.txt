@@ -1,0 +1,7 @@
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Caesar Decipherer\Caesar Decipherer\obj\Debug\Caesar Decipherer.csprojAssemblyReference.cache
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Caesar Decipherer\Caesar Decipherer\obj\Debug\Caesar Decipherer.csproj.CoreCompileInputs.cache
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Caesar Decipherer\Caesar Decipherer\bin\Debug\Caesar Decipherer.exe.config
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Caesar Decipherer\Caesar Decipherer\bin\Debug\Caesar Decipherer.exe
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Caesar Decipherer\Caesar Decipherer\bin\Debug\Caesar Decipherer.pdb
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Caesar Decipherer\Caesar Decipherer\obj\Debug\Caesar Decipherer.exe
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Caesar Decipherer\Caesar Decipherer\obj\Debug\Caesar Decipherer.pdb

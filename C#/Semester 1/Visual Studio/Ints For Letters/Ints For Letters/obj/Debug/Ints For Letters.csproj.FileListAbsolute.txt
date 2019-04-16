@@ -1,0 +1,6 @@
+C:\Users\166097\OneDrive - Academy District 20\Ints For Letters\Ints For Letters\bin\Debug\Ints For Letters.exe.config
+C:\Users\166097\OneDrive - Academy District 20\Ints For Letters\Ints For Letters\bin\Debug\Ints For Letters.exe
+C:\Users\166097\OneDrive - Academy District 20\Ints For Letters\Ints For Letters\bin\Debug\Ints For Letters.pdb
+C:\Users\166097\OneDrive - Academy District 20\Ints For Letters\Ints For Letters\obj\Debug\Ints For Letters.csproj.CoreCompileInputs.cache
+C:\Users\166097\OneDrive - Academy District 20\Ints For Letters\Ints For Letters\obj\Debug\Ints For Letters.exe
+C:\Users\166097\OneDrive - Academy District 20\Ints For Letters\Ints For Letters\obj\Debug\Ints For Letters.pdb

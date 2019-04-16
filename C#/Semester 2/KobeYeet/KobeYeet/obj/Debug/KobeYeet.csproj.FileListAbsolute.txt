@@ -1,0 +1,10 @@
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\KobeYeet\KobeYeet\bin\Debug\KobeYeet.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\KobeYeet\KobeYeet\bin\Debug\KobeYeet.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\KobeYeet\KobeYeet\bin\Debug\KobeYeet.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\KobeYeet\KobeYeet\obj\Debug\KobeYeet.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\KobeYeet\KobeYeet\obj\Debug\KobeYeet.Form1.resources
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\KobeYeet\KobeYeet\obj\Debug\KobeYeet.Properties.Resources.resources
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\KobeYeet\KobeYeet\obj\Debug\KobeYeet.csproj.GenerateResource.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\KobeYeet\KobeYeet\obj\Debug\KobeYeet.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\KobeYeet\KobeYeet\obj\Debug\KobeYeet.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\KobeYeet\KobeYeet\obj\Debug\KobeYeet.pdb

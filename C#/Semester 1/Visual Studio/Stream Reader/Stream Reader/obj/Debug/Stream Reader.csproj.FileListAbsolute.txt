@@ -1,0 +1,7 @@
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Reader\Stream Reader\bin\Debug\Stream Reader.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Reader\Stream Reader\bin\Debug\Stream Reader.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Reader\Stream Reader\bin\Debug\Stream Reader.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Reader\Stream Reader\obj\Debug\Stream Reader.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Reader\Stream Reader\obj\Debug\Stream Reader.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Reader\Stream Reader\obj\Debug\Stream Reader.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Archive 11-2-18\Visual Studio\Stream Reader\Stream Reader\obj\Debug\Stream Reader.pdb

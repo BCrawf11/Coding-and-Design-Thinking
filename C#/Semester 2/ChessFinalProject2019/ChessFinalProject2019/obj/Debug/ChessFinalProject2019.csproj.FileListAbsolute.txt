@@ -1,0 +1,10 @@
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\ChessFinalProject2019\ChessFinalProject2019\bin\Debug\ChessFinalProject2019.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\ChessFinalProject2019\ChessFinalProject2019\bin\Debug\ChessFinalProject2019.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\ChessFinalProject2019\ChessFinalProject2019\bin\Debug\ChessFinalProject2019.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.Form1.resources
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.Properties.Resources.resources
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.csproj.GenerateResource.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.pdb

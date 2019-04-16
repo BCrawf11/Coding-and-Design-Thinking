@@ -1,0 +1,14 @@
+C:\Users\166097\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\bin\Debug\Palindrome FINDER.exe.config
+C:\Users\166097\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\bin\Debug\Palindrome FINDER.exe
+C:\Users\166097\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\bin\Debug\Palindrome FINDER.pdb
+C:\Users\166097\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\obj\Debug\Palindrome FINDER.csprojAssemblyReference.cache
+C:\Users\166097\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\obj\Debug\Palindrome FINDER.csproj.CoreCompileInputs.cache
+C:\Users\166097\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\obj\Debug\Palindrome FINDER.exe
+C:\Users\166097\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\obj\Debug\Palindrome FINDER.pdb
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\bin\Debug\Palindrome FINDER.exe.config
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\bin\Debug\Palindrome FINDER.exe
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\bin\Debug\Palindrome FINDER.pdb
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\obj\Debug\Palindrome FINDER.csprojAssemblyReference.cache
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\obj\Debug\Palindrome FINDER.csproj.CoreCompileInputs.cache
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\obj\Debug\Palindrome FINDER.exe
+C:\Users\brodi\Desktop\OneDrive - Academy District 20\Palindrome FINDER\Palindrome FINDER\obj\Debug\Palindrome FINDER.pdb

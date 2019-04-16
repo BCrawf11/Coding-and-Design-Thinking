@@ -1,0 +1,7 @@
+C:\Users\166097\OneDrive - Academy District 20\Menu For Letters and Ints\Menu For Letters and Ints\obj\Debug\Menu For Letters and Ints.csprojAssemblyReference.cache
+C:\Users\166097\OneDrive - Academy District 20\Menu For Letters and Ints\Menu For Letters and Ints\obj\Debug\Menu For Letters and Ints.csproj.CoreCompileInputs.cache
+C:\Users\166097\OneDrive - Academy District 20\Menu For Letters and Ints\Menu For Letters and Ints\bin\Debug\Menu For Letters and Ints.exe.config
+C:\Users\166097\OneDrive - Academy District 20\Menu For Letters and Ints\Menu For Letters and Ints\bin\Debug\Menu For Letters and Ints.exe
+C:\Users\166097\OneDrive - Academy District 20\Menu For Letters and Ints\Menu For Letters and Ints\bin\Debug\Menu For Letters and Ints.pdb
+C:\Users\166097\OneDrive - Academy District 20\Menu For Letters and Ints\Menu For Letters and Ints\obj\Debug\Menu For Letters and Ints.exe
+C:\Users\166097\OneDrive - Academy District 20\Menu For Letters and Ints\Menu For Letters and Ints\obj\Debug\Menu For Letters and Ints.pdb

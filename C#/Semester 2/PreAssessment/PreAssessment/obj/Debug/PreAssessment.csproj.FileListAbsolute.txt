@@ -1,0 +1,7 @@
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\PreAssessment\PreAssessment\bin\Debug\PreAssessment.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\PreAssessment\PreAssessment\bin\Debug\PreAssessment.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\PreAssessment\PreAssessment\bin\Debug\PreAssessment.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\PreAssessment\PreAssessment\obj\Debug\PreAssessment.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\PreAssessment\PreAssessment\obj\Debug\PreAssessment.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\PreAssessment\PreAssessment\obj\Debug\PreAssessment.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\Semester 2\PreAssessment\PreAssessment\obj\Debug\PreAssessment.pdb

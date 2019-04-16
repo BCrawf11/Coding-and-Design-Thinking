@@ -1,0 +1,7 @@
+C:\Users\166097\source\repos\Lists\Lists\bin\Debug\Lists.exe.config
+C:\Users\166097\source\repos\Lists\Lists\bin\Debug\Lists.exe
+C:\Users\166097\source\repos\Lists\Lists\bin\Debug\Lists.pdb
+C:\Users\166097\source\repos\Lists\Lists\obj\Debug\Lists.csprojAssemblyReference.cache
+C:\Users\166097\source\repos\Lists\Lists\obj\Debug\Lists.csproj.CoreCompileInputs.cache
+C:\Users\166097\source\repos\Lists\Lists\obj\Debug\Lists.exe
+C:\Users\166097\source\repos\Lists\Lists\obj\Debug\Lists.pdb

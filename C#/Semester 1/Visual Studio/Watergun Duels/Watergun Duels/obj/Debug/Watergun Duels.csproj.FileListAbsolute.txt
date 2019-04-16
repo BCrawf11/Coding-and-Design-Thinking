@@ -1,0 +1,7 @@
+C:\Users\166097\OneDrive - Academy District 20\Watergun Duels\Watergun Duels\obj\Debug\Watergun Duels.csprojAssemblyReference.cache
+C:\Users\166097\OneDrive - Academy District 20\Watergun Duels\Watergun Duels\obj\Debug\Watergun Duels.csproj.CoreCompileInputs.cache
+C:\Users\166097\OneDrive - Academy District 20\Watergun Duels\Watergun Duels\bin\Debug\Watergun Duels.exe.config
+C:\Users\166097\OneDrive - Academy District 20\Watergun Duels\Watergun Duels\bin\Debug\Watergun Duels.exe
+C:\Users\166097\OneDrive - Academy District 20\Watergun Duels\Watergun Duels\bin\Debug\Watergun Duels.pdb
+C:\Users\166097\OneDrive - Academy District 20\Watergun Duels\Watergun Duels\obj\Debug\Watergun Duels.exe
+C:\Users\166097\OneDrive - Academy District 20\Watergun Duels\Watergun Duels\obj\Debug\Watergun Duels.pdb
