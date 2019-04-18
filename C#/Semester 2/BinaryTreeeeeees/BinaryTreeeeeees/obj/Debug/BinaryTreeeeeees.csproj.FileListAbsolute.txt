@@ -1,0 +1,7 @@
+C:\Users\166097\Documents\Junior-Year-Coding-Class\C#\Semester 2\BinaryTreeeeeees\BinaryTreeeeeees\bin\Debug\BinaryTreeeeeees.exe.config
+C:\Users\166097\Documents\Junior-Year-Coding-Class\C#\Semester 2\BinaryTreeeeeees\BinaryTreeeeeees\bin\Debug\BinaryTreeeeeees.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\C#\Semester 2\BinaryTreeeeeees\BinaryTreeeeeees\bin\Debug\BinaryTreeeeeees.pdb
+C:\Users\166097\Documents\Junior-Year-Coding-Class\C#\Semester 2\BinaryTreeeeeees\BinaryTreeeeeees\obj\Debug\BinaryTreeeeeees.csprojAssemblyReference.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\C#\Semester 2\BinaryTreeeeeees\BinaryTreeeeeees\obj\Debug\BinaryTreeeeeees.csproj.CoreCompileInputs.cache
+C:\Users\166097\Documents\Junior-Year-Coding-Class\C#\Semester 2\BinaryTreeeeeees\BinaryTreeeeeees\obj\Debug\BinaryTreeeeeees.exe
+C:\Users\166097\Documents\Junior-Year-Coding-Class\C#\Semester 2\BinaryTreeeeeees\BinaryTreeeeeees\obj\Debug\BinaryTreeeeeees.pdb
