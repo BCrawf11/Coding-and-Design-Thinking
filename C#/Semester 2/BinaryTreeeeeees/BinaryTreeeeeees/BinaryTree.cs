@@ -58,14 +58,57 @@ namespace BinaryTreeeeeees
             }
         }
 
-        public bool Remove(char c)
+        public void Remove(char c)
         {
-            return false;
+            if (root == null)
+            {
+                return;
+            }
+            else
+                Remove(root, c);
         }
 
-        private bool Remove(NOde n, char c)
+        private NOde Remove(NOde n, char c)
         {
-            return false;
+            if (n == null)
+            {
+                return n;
+            }
+
+            if (c > n.Value)
+            {
+                n.RightChild = Remove(n.RightChild, c);
+            }
+
+            if (c < n.Value)
+            {
+                n.LeftChild = Remove(n.LeftChild, c);
+            }
+
+            else
+            {
+                if (n.RightChild == null)
+                {
+                    return n.LeftChild;
+                }
+
+                if (n.LeftChild == null)
+                {
+                    return n.RightChild;
+                }
+
+                NOde right = n.RightChild;
+                char min = 'l';
+
+                while (right.LeftChild != null)
+                {
+                    min = right.LeftChild.Value;
+                    n = right.LeftChild;
+                }
+
+                n.RightChild = Remove(n.RightChild, min);
+            }
+            return n;
         }
 
         public bool Search(char c)
