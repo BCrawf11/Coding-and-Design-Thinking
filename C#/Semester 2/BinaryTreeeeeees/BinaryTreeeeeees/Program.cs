@@ -32,7 +32,10 @@ namespace BinaryTreeeeeees
                 Console.WriteLine("1. Search for a letter");
                 Console.WriteLine("2. Remove a letter");
                 Console.WriteLine("3. Print the tree");
-                Console.WriteLine("4. Quit");
+                Console.WriteLine("4. Pre Order Print the tree");
+                Console.WriteLine("5. In Order Print the tree");
+                Console.WriteLine("6. Post Order Print the tree");
+                Console.WriteLine("7. Quit");
                 Console.WriteLine();
                 input = int.Parse(Console.ReadLine());
 
@@ -65,9 +68,24 @@ namespace BinaryTreeeeeees
 
                         bt.Print();
                         break;
+                    case 3:
+                        bt.Print();
+                        break;
+                    case 4:
+                        bt.PreOrderPrint();
+                        Console.WriteLine();
+                        break;
+                    case 5:
+                        bt.InOrderPrint();  
+                        Console.WriteLine();
+                        break;
+                    case 6:
+                        bt.PostOrderPrint();
+                        Console.WriteLine();
+                        break;
                 }
             }
-            while (input != 4);
+            while (input != 7);
             Console.WriteLine();
         }
     }

@@ -9,8 +9,6 @@ namespace BinaryTreeeeeees
     class BinaryTree
     {
         private NOde root;
-        public int height;
-        public int count;
 
         public void Print()
         {
@@ -65,7 +63,7 @@ namespace BinaryTreeeeeees
                 return;
             }
             else
-                Remove(root, c);
+                root = Remove(root, c);
         }
 
         private NOde Remove(NOde n, char c)
@@ -80,35 +78,38 @@ namespace BinaryTreeeeeees
                 n.RightChild = Remove(n.RightChild, c);
             }
 
-            if (c < n.Value)
+            else if (c < n.Value)
             {
                 n.LeftChild = Remove(n.LeftChild, c);
             }
 
             else
             {
-                if (n.RightChild == null)
-                {
-                    return n.LeftChild;
-                }
-
                 if (n.LeftChild == null)
                 {
                     return n.RightChild;
                 }
 
-                NOde right = n.RightChild;
-                char min = 'l';
-
-                while (right.LeftChild != null)
+                if (n.RightChild == null)
                 {
-                    min = right.LeftChild.Value;
-                    n = right.LeftChild;
+                    return n.LeftChild;
                 }
 
-                n.RightChild = Remove(n.RightChild, min);
+                n.Value = MinValue(n.RightChild);
+                n.RightChild = Remove(n.RightChild, n.Value);
             }
             return n;
+        }
+
+        private char MinValue(NOde n)
+        {
+            char min = n.Value;
+            while (n.LeftChild != null)
+            {
+                min = n.LeftChild.Value;
+                n = n.LeftChild;
+            }
+            return min;
         }
 
         public bool Search(char c)
@@ -145,32 +146,77 @@ namespace BinaryTreeeeeees
 
         public void PreOrderPrint()
         {
-
+            if (root != null)
+            {
+                PreOrderPrint(root);
+            }
+            else
+                Console.WriteLine("No tree to process.");
         }
 
         private void PreOrderPrint(NOde n)
         {
+            Console.Write(n.Value + ", ");
 
+            if (n.LeftChild != null)
+            {
+                PreOrderPrint(n.LeftChild);
+            }
+
+            if (n.RightChild != null)
+            {
+                PreOrderPrint(n.RightChild);
+            }
         }
 
         public void InOrderPrint()
         {
-
+            if (root != null)
+            {
+                InOrderPrint(root);
+            }
+            else
+                Console.WriteLine("No tree to process.");
         }
 
         private void InOrderPrint(NOde n)
         {
-            
+            if (n.LeftChild != null)
+            {
+                InOrderPrint(n.LeftChild);
+            }
+
+            Console.Write(n.Value + ", ");
+
+            if (n.RightChild != null)
+            {
+                InOrderPrint(n.RightChild);
+            }
         }
 
         public void PostOrderPrint()
         {
-
+            if (root != null)
+            {
+                PostOrderPrint(root);
+            }
+            else
+                Console.WriteLine("No tree to process.");
         }
 
         private void PostOrderPrint(NOde n)
         {
+            if (n.LeftChild != null)
+            {
+                PostOrderPrint(n.LeftChild);
+            }
 
+            if (n.RightChild != null)
+            {
+                PostOrderPrint(n.RightChild);
+            }
+
+            Console.Write(n.Value + ", ");
         }
     }
 }
