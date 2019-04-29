@@ -12,6 +12,7 @@ namespace ChessFinalProject2019
 {
     public partial class Form1 : Form
     {
+        Grid chessBoard = new Grid();
         Button[,] buttons = new Button[8, 8];
 
         public Form1()
@@ -149,20 +150,38 @@ namespace ChessFinalProject2019
             }
             //////
 
+            //makes the buttons a different color when you mouse over them
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
                 {
                     int x = i, y = j;
-                    buttons[i, j].MouseEnter += (o, e) => ChangeColor(x, y, Color.Cyan);
-                    buttons[i, j].MouseLeave += (o, e) => ChangeColor(x, y, Color.Transparent);
+                    buttons[x, y].MouseEnter += (o, e) => ChangeColor(x, y, Color.Tan);
+                    buttons[x, y].MouseEnter += (o, e) => HighlightPossibleRoutes(x, y);
+                    buttons[x, y].MouseLeave += (o, e) => ChangeColor(x, y, Color.Transparent);
                 }
             }
+            //////
+
+            // when you mouse over the pieces, it shows you where they can move
+
+            ////////
         }
 
         public void ChangeColor(int x, int y, Color c)
         {
             buttons[x, y].BackColor = c;
         }
+
+        public void HighlightPossibleRoutes(int x, int y)
+        {
+            List<Tuple<int, int>> toColor = chessBoard.Highlight(x, y);
+
+            for (int i = 0; i < toColor.Count; i++)
+            {
+                buttons[toColor[i].Item1, toColor[i].Item2].BackColor = Color.Cyan;
+            }
+        }
+
     }
 }
