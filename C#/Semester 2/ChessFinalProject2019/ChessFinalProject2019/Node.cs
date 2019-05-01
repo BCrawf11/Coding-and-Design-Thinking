@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ChessFinalProject2019
 {
-    public enum Piece { Rook, Knight, Bishop, Queen, King, Pawn, empty }
-    public enum Player { White, Black }
+    public enum Piece { Rook, Knight, Bishop, Queen, King, Pawn, Empty }
+    public enum Player { White, Black, Empty }
 
-    class Node
+    public class Node
     {
         public Piece piece;
         public Player player;

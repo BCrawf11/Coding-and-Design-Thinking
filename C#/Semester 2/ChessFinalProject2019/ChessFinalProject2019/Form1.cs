@@ -156,16 +156,14 @@ namespace ChessFinalProject2019
                 for (int j = 0; j < 8; j++)
                 {
                     int x = i, y = j;
-                    buttons[x, y].MouseEnter += (o, e) => ChangeColor(x, y, Color.Tan);
+                    //fix
+                    buttons[x, y].MouseEnter += (o, e) => ChangeColor(x, y, Color.Green);
+                    //
                     buttons[x, y].MouseEnter += (o, e) => HighlightPossibleRoutes(x, y);
                     buttons[x, y].MouseLeave += (o, e) => ChangeColor(x, y, Color.Transparent);
                 }
             }
             //////
-
-            // when you mouse over the pieces, it shows you where they can move
-
-            ////////
         }
 
         public void ChangeColor(int x, int y, Color c)
@@ -173,15 +171,36 @@ namespace ChessFinalProject2019
             buttons[x, y].BackColor = c;
         }
 
+        // when you mouse over the pieces, it shows you where they can move
         public void HighlightPossibleRoutes(int x, int y)
         {
-            List<Tuple<int, int>> toColor = chessBoard.Highlight(x, y);
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    ChangeColor(i, j, Color.Transparent);
+                }
+            }
+
+            List<Tuple<int, int>> toColor = new List<Tuple<int, int>>();
+
+            if (chessBoard.Highlight(x, y) == null)
+            {
+                toColor.Add(new Tuple<int, int>(x, y));
+            }
+            else
+                toColor = chessBoard.Highlight(x, y);
 
             for (int i = 0; i < toColor.Count; i++)
             {
-                buttons[toColor[i].Item1, toColor[i].Item2].BackColor = Color.Cyan;
+                if (toColor[i].Item1 == x && toColor[i].Item2 == y)
+                {
+                    break;
+                }
+                else
+                    buttons[toColor[i].Item1, toColor[i].Item2].BackColor = Color.Cyan;
             }
         }
-
+        ////////
     }
 }

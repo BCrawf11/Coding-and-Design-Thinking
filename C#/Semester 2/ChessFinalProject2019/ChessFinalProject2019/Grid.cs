@@ -14,7 +14,47 @@ namespace ChessFinalProject2019
         {
             Nodes = new Node[8, 8];
 
-            //initialize node array here
+            //initializes white first row
+            Nodes[0, 0] = new Node(Piece.Rook, Player.White, 0, 0);
+            Nodes[0, 1] = new Node(Piece.Knight, Player.White, 0, 1);
+            Nodes[0, 2] = new Node(Piece.Bishop, Player.White, 0, 2);
+            Nodes[0, 3] = new Node(Piece.Queen, Player.White, 0, 3);
+            Nodes[0, 4] = new Node(Piece.King, Player.White, 0, 4);
+            Nodes[0, 5] = new Node(Piece.Bishop, Player.White, 0, 5);
+            Nodes[0, 6] = new Node(Piece.Knight, Player.White, 0, 6);
+            Nodes[0, 7] = new Node(Piece.Rook, Player.White, 0, 7);
+
+            //initializes white pawns
+            for (int i = 0; i < 8; i++)
+            {
+                Nodes[1, i] = new Node(Piece.Pawn, Player.White, 1, i);
+            }
+
+            //initializes empty spaces
+            for (int i = 2; i < 6; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    Nodes[i, j] = new Node(Piece.Empty, Player.Empty, i, j);
+                }
+            }
+
+            //intializes black pawns
+            for (int i = 0; i < 8; i++)
+            {
+                Nodes[6, i] = new Node(Piece.Pawn, Player.Black, 6, i);
+            }
+
+            //initializes black first row
+            Nodes[7, 0] = new Node(Piece.Rook, Player.White, 7, 0);
+            Nodes[7, 1] = new Node(Piece.Knight, Player.White, 7, 1);
+            Nodes[7, 2] = new Node(Piece.Bishop, Player.White, 7, 2);
+            Nodes[7, 3] = new Node(Piece.Queen, Player.White, 7, 3);
+            Nodes[7, 4] = new Node(Piece.King, Player.White, 7, 4);
+            Nodes[7, 5] = new Node(Piece.Bishop, Player.White, 7, 5);
+            Nodes[7, 6] = new Node(Piece.Knight, Player.White, 7, 6);
+            Nodes[7, 7] = new Node(Piece.Rook, Player.White, 7, 7);
+
         }
 
         public List<Tuple<int, int>> Highlight(int x, int y)
@@ -56,6 +96,12 @@ namespace ChessFinalProject2019
                 return PawnMovable(Nodes[x, y]);
             }
 
+            if (Nodes[x, y].piece == Piece.Empty)
+            {
+                correctSpaces.Add(new Tuple<int, int>(x, y));
+                return correctSpaces;
+            }
+
             else
             {
                 return null;
@@ -73,29 +119,26 @@ namespace ChessFinalProject2019
         {
             List<Tuple<int, int>> correctSpaces = new List<Tuple<int, int>>();
 
-            bool taken = false;
-
             for (int x = -2; x <= 2; x++)
             {
                 int y = 3 - Math.Abs(x);
+                int xp = n.x + x;
+                int yp = n.y + y;
+                int yn = n.y - y;
 
-                try
+                if (x == 0)
                 {
-                    if (x == 0)
-                    {
-                        continue;
-                    }
-
-                    if (!taken)
-                    {
-                        correctSpaces.Add(new Tuple<int, int>(n.x + x, n.y + 1));
-                    }
+                    continue;
                 }
 
-                catch (IndexOutOfRangeException e)
+                if (xp <= 7 && xp >= 0 && yp <= 7 && Nodes[xp, yp].piece == Piece.Empty)
                 {
-                    taken = true;
-                    continue;
+                    correctSpaces.Add(new Tuple<int, int>(xp, yp));
+                }
+
+                if (xp <= 7 && xp >= 0 && yn >= 0 && Nodes[xp, yn].piece == Piece.Empty)
+                {
+                    correctSpaces.Add(new Tuple<int, int>(xp, yn));
                 }
             }
 
