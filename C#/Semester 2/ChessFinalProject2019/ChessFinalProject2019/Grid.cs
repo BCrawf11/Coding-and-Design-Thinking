@@ -16,45 +16,48 @@ namespace ChessFinalProject2019
 
             //initializes white first row
             Nodes[0, 0] = new Node(Piece.Rook, Player.White, 0, 0);
-            Nodes[0, 1] = new Node(Piece.Knight, Player.White, 0, 1);
-            Nodes[0, 2] = new Node(Piece.Bishop, Player.White, 0, 2);
-            Nodes[0, 3] = new Node(Piece.Queen, Player.White, 0, 3);
-            Nodes[0, 4] = new Node(Piece.King, Player.White, 0, 4);
-            Nodes[0, 5] = new Node(Piece.Bishop, Player.White, 0, 5);
-            Nodes[0, 6] = new Node(Piece.Knight, Player.White, 0, 6);
-            Nodes[0, 7] = new Node(Piece.Rook, Player.White, 0, 7);
+            Nodes[1, 0] = new Node(Piece.Knight, Player.White, 1, 0);
+            Nodes[2, 0] = new Node(Piece.Bishop, Player.White, 2, 0);
+            Nodes[3, 0] = new Node(Piece.Queen, Player.White, 3, 0);
+            Nodes[4, 0] = new Node(Piece.King, Player.White, 4, 0);
+            Nodes[5, 0] = new Node(Piece.Bishop, Player.White, 5, 0);
+            Nodes[6, 0] = new Node(Piece.Knight, Player.White, 6, 0);
+            Nodes[7, 0] = new Node(Piece.Rook, Player.White, 7, 0);
 
             //initializes white pawns
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i <= 7; i++)
             {
-                Nodes[1, i] = new Node(Piece.Pawn, Player.White, 1, i);
+                Nodes[i, 1] = new Node(Piece.Pawn, Player.White, i, 1);
             }
 
             //initializes empty spaces
-            for (int i = 2; i < 6; i++)
+            for (int i = 0; i <= 7; i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 2; j <= 5; j++)
                 {
                     Nodes[i, j] = new Node(Piece.Empty, Player.Empty, i, j);
                 }
             }
 
             //intializes black pawns
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i <= 7; i++)
             {
-                Nodes[6, i] = new Node(Piece.Pawn, Player.Black, 6, i);
+                Nodes[i, 6] = new Node(Piece.Pawn, Player.Black, i, 6);
             }
 
             //initializes black first row
-            Nodes[7, 0] = new Node(Piece.Rook, Player.White, 7, 0);
-            Nodes[7, 1] = new Node(Piece.Knight, Player.White, 7, 1);
-            Nodes[7, 2] = new Node(Piece.Bishop, Player.White, 7, 2);
-            Nodes[7, 3] = new Node(Piece.Queen, Player.White, 7, 3);
-            Nodes[7, 4] = new Node(Piece.King, Player.White, 7, 4);
-            Nodes[7, 5] = new Node(Piece.Bishop, Player.White, 7, 5);
-            Nodes[7, 6] = new Node(Piece.Knight, Player.White, 7, 6);
-            Nodes[7, 7] = new Node(Piece.Rook, Player.White, 7, 7);
+            Nodes[0, 7] = new Node(Piece.Rook, Player.Black, 0, 7);
+            Nodes[1, 7] = new Node(Piece.Knight, Player.Black, 1, 7);
+            Nodes[2, 7] = new Node(Piece.Bishop, Player.Black, 2, 7);
+            Nodes[3, 7] = new Node(Piece.Queen, Player.Black, 3, 7);
+            Nodes[4, 7] = new Node(Piece.King, Player.Black, 4, 7);
+            Nodes[5, 7] = new Node(Piece.Bishop, Player.Black, 5, 7);
+            Nodes[6, 7] = new Node(Piece.Knight, Player.Black, 6, 7);
+            Nodes[7, 7] = new Node(Piece.Rook, Player.Black, 7, 7);
 
+            //debug
+            //Nodes[4, 4] = new Node(Piece.Queen, Player.Black, 4, 4);
+            Nodes[2, 4] = new Node(Piece.Bishop, Player.Black, 2, 4);
         }
 
         public List<Tuple<int, int>> Highlight(int x, int y)
@@ -108,9 +111,69 @@ namespace ChessFinalProject2019
             }
         }
 
+        //opposite color, etc & curly bois & other methods
         public List<Tuple<int, int>> RookMovable(Node n)
         {
             List<Tuple<int, int>> correctSpaces = new List<Tuple<int, int>>();
+
+            bool lstopped = false;
+            bool rstopped = false;
+
+            for (int x = 0; x <= 7; x++)
+            {
+                int xp = n.x + x;
+                int xn = n.x - x;
+
+                if (x == 0)
+                {
+                    continue;
+                }
+
+                if (xp <= 7 && Nodes[xp, n.y].piece == Piece.Empty && !rstopped)
+                {
+                    correctSpaces.Add(new Tuple<int, int>(xp, n.y));
+                }
+                else
+                    //if opposite color, etc & curly bois & other methods
+                    rstopped = true;
+
+
+                if (xn >= 0 && Nodes[xn, n.y].piece == Piece.Empty && !lstopped)
+                {
+                    correctSpaces.Add(new Tuple<int, int>(xn, n.y));
+                }
+                else
+                    //if opposite color, etc & curly bois & other methods
+                    lstopped = true;
+            }
+
+            bool ustopped = false;
+            bool bstopped = false;
+
+            for (int y = 0; y <= 7; y++)
+            {
+                int yp = n.y + y;
+                int yn = n.y - y;
+
+                if (y == 0)
+                {
+                    continue;
+                }
+
+                if (yp <= 7 && Nodes[n.x, yp].piece == Piece.Empty && !ustopped)
+                {
+                    correctSpaces.Add(new Tuple<int, int>(n.x, yp));
+                }
+                else
+                    ustopped = true;
+
+                if (yn >= 0 && Nodes[n.x, yn].piece == Piece.Empty && !bstopped)
+                {
+                    correctSpaces.Add(new Tuple<int, int>(n.x, yn));
+                }
+                else
+                    bstopped = true;                
+            }
 
             return correctSpaces;
         }
@@ -149,12 +212,163 @@ namespace ChessFinalProject2019
         {
             List<Tuple<int, int>> correctSpaces = new List<Tuple<int, int>>();
 
+            bool ulstopped = false;
+            bool urstopped = false;
+            bool blstopped = false;
+            bool brstopped = false;
+
+            for (int x = 0; x <= 7; x++)
+            {
+                for (int y = 0; y <= 7; y++)
+                {
+                    int xp = n.x + x;
+                    int xn = n.x - x;
+                    int yp = n.y + y;
+                    int yn = n.y - y;
+
+                    if (x == 0 || y == 0)
+                    {
+                        continue;
+                    }
+
+                    if (Math.Abs(x) == Math.Abs(y))
+                    {
+                        //x is pos, y is pos
+                        if (yp <= 7 && xp <= 7 && Nodes[xp, yp].piece == Piece.Empty && !urstopped)
+                        {
+                            correctSpaces.Add(new Tuple<int, int>(xp, yp));
+                        }
+                        else
+                            urstopped = true;
+
+                        //x is neg, y is pos
+                        if (xn >= 0 && yp <= 7 && Nodes[xn, yp].piece == Piece.Empty && !ulstopped)
+                        {
+                            correctSpaces.Add(new Tuple<int, int>(xn, yp));
+                        }
+                        else
+                            ulstopped = true;
+
+                        //x is pos, y is neg
+                        if (xp <= 7 && yn >= 0 && Nodes[xp, yn].piece == Piece.Empty && !brstopped)
+                        {
+                            correctSpaces.Add(new Tuple<int, int>(xp, yn));
+                        }
+                        else
+                            brstopped = true;
+
+                        //x is neg, y is neg
+                        if (xn >= 0 && yn >= 0 && Nodes[xn, yn].piece == Piece.Empty && !blstopped)
+                        {
+                            correctSpaces.Add(new Tuple<int, int>(xn, yn));
+                        }
+                        else
+                            blstopped = true;
+                    }
+                }
+            }
+
             return correctSpaces;
         }
 
         public List<Tuple<int, int>> QueenMovable(Node n)
         {
             List<Tuple<int, int>> correctSpaces = new List<Tuple<int, int>>();
+
+            bool ulstopped = false;
+            bool urstopped = false;
+            bool blstopped = false;
+            bool brstopped = false;
+            bool lstopped = false;
+            bool rstopped = false;
+            bool ustopped = false;
+            bool bstopped = false;
+
+            for (int x = 0; x <= 7; x++)
+            {
+                int xp = n.x + x;
+                int xn = n.x - x;
+
+                if (x == 0)
+                {
+                    continue;
+                }
+
+                if (xp <= 7 && Nodes[xp, n.y].piece == Piece.Empty && !rstopped)
+                {
+                    correctSpaces.Add(new Tuple<int, int>(xp, n.y));
+                }
+                else
+                    rstopped = true;
+
+
+                if (xn >= 0 && Nodes[xn, n.y].piece == Piece.Empty && !lstopped)
+                {
+                    correctSpaces.Add(new Tuple<int, int>(xn, n.y));
+                }
+                else
+                    lstopped = true;
+
+                for (int y = 0; y <= 7; y++)
+                {
+                    int yp = n.y + y;
+                    int yn = n.y - y;
+
+                    if (x == 0 && y == 0)
+                    {
+                        continue;
+                    }
+
+                    if (Math.Abs(x) == Math.Abs(y))
+                    {
+                        //x is pos, y is pos
+                        if (yp <= 7 && xp <= 7 && Nodes[xp, yp].piece == Piece.Empty && !urstopped)
+                        {
+                            correctSpaces.Add(new Tuple<int, int>(xp, yp));
+                        }
+                        else
+                            urstopped = true;
+
+                        //x is neg, y is pos
+                        if (xn >= 0 && yp <= 7 && Nodes[xn, yp].piece == Piece.Empty && !ulstopped)
+                        {
+                            correctSpaces.Add(new Tuple<int, int>(xn, yp));
+                        }
+                        else
+                            ulstopped = true;
+
+                        //x is pos, y is neg
+                        if (xp <= 7 && yn >= 0 && Nodes[xp, yn].piece == Piece.Empty && !brstopped)
+                        {
+                            correctSpaces.Add(new Tuple<int, int>(xp, yn));
+                        }
+                        else
+                            brstopped = true;
+
+                        //x is neg, y is neg
+                        if (xn >= 0 && yn >= 0 && Nodes[xn, yn].piece == Piece.Empty && !blstopped)
+                        {
+                            correctSpaces.Add(new Tuple<int, int>(xn, yn));
+                        }
+                        else
+                            blstopped = true;
+                    }
+
+                    if (yp <= 7 && Nodes[n.x, yp].piece == Piece.Empty && !ustopped)
+                    {
+                        correctSpaces.Add(new Tuple<int, int>(n.x, yp));
+                    }
+                    else
+                        ustopped = true;
+
+                    if (yn >= 0 && Nodes[n.x, yn].piece == Piece.Empty && !bstopped)
+                    {
+                        correctSpaces.Add(new Tuple<int, int>(n.x, yn));
+                    }
+                    else
+                        bstopped = true;
+                }
+            }
 
             return correctSpaces;
         }
@@ -170,32 +384,44 @@ namespace ChessFinalProject2019
         {
             List<Tuple<int, int>> correctSpaces = new List<Tuple<int, int>>();
 
-            bool taken = false;
-
-            for (int x = - 1; x < 1; x++)
+            for (int x = - 1; x <= 1; x++)
             {
                 int y = x;
+                int xp = n.x + x;
+                int yn1 = n.y - 1;
+                int yn2 = n.y - 2;
+                int yp1 = n.y + 1;
+                int yp2 = n.y + 2;
 
-                try
+                if (n.player == Player.Black && xp >= 0 && xp <= 7 && yn1 >= 0 && yn2 >= 0)
                 {
-                    if (n.player == Player.Black && !taken)
+                    if (x == 0)
                     {
-                        correctSpaces.Add(new Tuple<int, int>(n.x, n.y - 1));
-                        correctSpaces.Add(new Tuple<int, int>(n.x, n.y - 2));
+                        correctSpaces.Add(new Tuple<int, int>(xp, yn1));
+                        //only on 2nd turn
+                        correctSpaces.Add(new Tuple<int, int>(xp, yn2));
                     }
-
-                    if (n.player == Player.White && !taken)
+                    else if (Nodes[xp, yn1].piece != Piece.Empty && Nodes[xp, yn1].player != Player.Black)
                     {
-                        correctSpaces.Add(new Tuple<int, int>(n.x, n.y + 1));
-                        correctSpaces.Add(new Tuple<int, int>(n.x, n.y + 2));
+                        correctSpaces.Add(new Tuple<int, int>(xp, yn1));
                     }
                 }
 
-                catch (IndexOutOfRangeException e)
+                if (n.player == Player.White && xp >= 0 && xp <= 7 && yp1 <= 7 && yp2 <= 7)
                 {
-                    taken = true;
-                    continue;
+                    if (x == 0)
+                    {
+                        correctSpaces.Add(new Tuple<int, int>(xp, yp1));
+                        //only on 2nd turn
+                        correctSpaces.Add(new Tuple<int, int>(xp, yp2));
+                    }
+                    else if (Nodes[xp, yp1].piece != Piece.Empty && Nodes[xp, yp1].player != Player.Black)
+                    {
+                        correctSpaces.Add(new Tuple<int, int>(xp, yp1));
+                    }
                 }
+
+                continue;
             }
 
             return correctSpaces;
