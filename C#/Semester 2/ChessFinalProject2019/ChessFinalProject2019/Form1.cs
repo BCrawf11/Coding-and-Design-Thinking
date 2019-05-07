@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,10 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ChessFinalProject2019
+namespace ChessFinalProject2019Home
 {
     public partial class Form1 : Form
     {
+        //all paths
+        public string RookWhitePath = AppDomain.CurrentDomain.BaseDirectory + @"RookW.png";
+        string RookBlackPath = AppDomain.CurrentDomain.BaseDirectory + @"RookB.png";
+        string KnightWhitePath = AppDomain.CurrentDomain.BaseDirectory + @"KnightW.png";
+        string KnightBlackPath = AppDomain.CurrentDomain.BaseDirectory + @"KnightB.png";
+        string BishopWhitePath = AppDomain.CurrentDomain.BaseDirectory + @"BishopW.png";
+        string BishopBlackPath = AppDomain.CurrentDomain.BaseDirectory + @"BishopB.png";
+        string QueenWhitePath = AppDomain.CurrentDomain.BaseDirectory + @"QueenW.png";
+        string QueenBlackPath = AppDomain.CurrentDomain.BaseDirectory + @"QueenB.png";
+        string KingWhitePath = AppDomain.CurrentDomain.BaseDirectory + @"KingW.png";
+        string KingBlackPath = AppDomain.CurrentDomain.BaseDirectory + @"KingB.png";
+        string PawnWhitePath = AppDomain.CurrentDomain.BaseDirectory + @"PawnW.png";
+        string PawnBlackPath = AppDomain.CurrentDomain.BaseDirectory + @"PawnB.png";
+        //////
+
+        private bool button1Clicked = false;
+        public bool whiteTurn = true;
         Grid chessBoard = new Grid();
         Button[,] buttons = new Button[8, 8];
 
@@ -91,64 +108,49 @@ namespace ChessFinalProject2019
             buttons[6, 0] = A7;
             buttons[7, 0] = A8;
 
-            //all paths
-            string rwpath = AppDomain.CurrentDomain.BaseDirectory + @"RookW.png";
-            string rbpath = AppDomain.CurrentDomain.BaseDirectory + @"RookB.png";
-            string knwpath = AppDomain.CurrentDomain.BaseDirectory + @"KnightW.png";
-            string knbpath = AppDomain.CurrentDomain.BaseDirectory + @"KnightB.png";
-            string bwpath = AppDomain.CurrentDomain.BaseDirectory + @"BishopW.png";
-            string bbpath = AppDomain.CurrentDomain.BaseDirectory + @"BishopB.png";
-            string qwpath = AppDomain.CurrentDomain.BaseDirectory + @"QueenW.png";
-            string qbpath = AppDomain.CurrentDomain.BaseDirectory + @"QueenB.png";
-            string kiwpath = AppDomain.CurrentDomain.BaseDirectory + @"KingW.png";
-            string kibpath = AppDomain.CurrentDomain.BaseDirectory + @"KingB.png";
-            string pwpath = AppDomain.CurrentDomain.BaseDirectory + @"PawnW.png";
-            string pbpath = AppDomain.CurrentDomain.BaseDirectory + @"PawnB.png";
-            //////
-            
             //sets all the white pieces to their buttons
-            Image RookW = Image.FromFile(rwpath);
+            Image RookW = Image.FromFile(RookWhitePath);
             buttons[0, 0].BackgroundImage = RookW;
             buttons[7, 0].BackgroundImage = RookW;
-            Image KnightW = Image.FromFile(knwpath);
+            Image KnightW = Image.FromFile(KnightWhitePath);
             buttons[1, 0].BackgroundImage = KnightW;
             buttons[6, 0].BackgroundImage = KnightW;
-            Image BishopW = Image.FromFile(bwpath);
+            Image BishopW = Image.FromFile(BishopWhitePath);
             buttons[2, 0].BackgroundImage = BishopW;
             buttons[5, 0].BackgroundImage = BishopW;
-            Image QueenW = Image.FromFile(qwpath);
+            Image QueenW = Image.FromFile(QueenWhitePath);
             buttons[3, 0].BackgroundImage = QueenW;
-            Image KingW = Image.FromFile(kiwpath);
+            Image KingW = Image.FromFile(KingWhitePath);
             buttons[4, 0].BackgroundImage = KingW;
 
             for (int i = 0; i < 8; i++)
             {
-                Image PawnW = Image.FromFile(pwpath);
+                Image PawnW = Image.FromFile(PawnWhitePath);
                 buttons[i, 1].BackgroundImage = PawnW;
             }
             //////
 
             //sets all the black pieces to their buttons
-            Image RookB = Image.FromFile(rbpath);
+            Image RookB = Image.FromFile(RookBlackPath);
             buttons[0, 7].BackgroundImage = RookB;
             buttons[7, 7].BackgroundImage = RookB;
-            Image KnightB = Image.FromFile(knbpath);
+            Image KnightB = Image.FromFile(KnightBlackPath);
             buttons[1, 7].BackgroundImage = KnightB;
             buttons[6, 7].BackgroundImage = KnightB;
-            Image BishopB = Image.FromFile(bbpath);
+            Image BishopB = Image.FromFile(BishopBlackPath);
             buttons[2, 7].BackgroundImage = BishopB;
             buttons[5, 7].BackgroundImage = BishopB;
-            Image QueenB = Image.FromFile(qbpath);
+            Image QueenB = Image.FromFile(QueenBlackPath);
             buttons[3, 7].BackgroundImage = QueenB;
-            Image KingB = Image.FromFile(kibpath);
+            Image KingB = Image.FromFile(KingBlackPath);
             buttons[4, 7].BackgroundImage = KingB;
 
             for (int i = 0; i < 8; i++)
             {
-                Image PawnB = Image.FromFile(pbpath);
+                Image PawnB = Image.FromFile(PawnBlackPath);
                 buttons[i, 6].BackgroundImage = PawnB;
             }
-            //////
+            ////
 
             //makes the buttons a different color when you mouse over them
             for (int i = 0; i < 8; i++)
@@ -159,7 +161,12 @@ namespace ChessFinalProject2019
 
                     buttons[x, y].MouseEnter += (o, e) => HighlightPossibleRoutes(x, y);
                     buttons[x, y].MouseEnter += (o, e) => ChangeColor(x, y, Color.Tan);
-                    buttons[x, y].MouseLeave += (o, e) => ChangeColor(x, y, Color.Transparent);
+
+                    if (buttons1_Click(x, y, e) == true && button2isclicked)
+                    {
+                        buttons[x, y].MouseEnter += (o, e) => buttons2_Click(x, y, e);
+                    }
+
                 }
             }
             //////
@@ -199,6 +206,51 @@ namespace ChessFinalProject2019
                 else
                     buttons[toColor[i].Item1, toColor[i].Item2].BackColor = Color.Cyan;
             }
+        }
+
+        private bool Click1(int x, int y, EventArgs e)
+        {
+            if (chessBoard.GetPiece(x, y) != "Empty")
+            button1Clicked = true;
+            return button1Clicked;
+        }
+
+        //only calls if another piece is clicked before and the next piece is clicked
+        private void Click2(int x, int y, EventArgs e)
+        {
+            Tuple<int, int> toMove = chessBoard.PieceMove(x, y);
+            List<Tuple<int, int>> correctSpaces = new List<Tuple<int, int>>();
+            correctSpaces = chessBoard.Highlight(x, y);
+            bool canMove = false;
+
+            for (int i = 0; i < correctSpaces.Count; i++)
+            {
+                if (correctSpaces[i] == toMove)
+                {
+                    canMove = true;
+                    break;
+                }
+                else
+                {
+                    canMove = false;
+                    break;
+                }
+            }
+
+            if (button1Clicked == true && canMove == true)
+            {
+                buttons[toMove.Item1, toMove.Item2].BackgroundImage = 
+                    Image.FromFile(chessBoard.GetPiece(toMove.Item1, toMove.Item2) + chessBoard.GetPlayer(toMove.Item1, toMove.Item2) + "Path");
+
+                if (chessBoard.GetPlayer(toMove.Item1, toMove.Item2) == "Black")
+                {
+                    whiteTurn = true;
+                }
+                else
+                    whiteTurn = false;
+            }
+            else
+                return;
         }
     }
 }
