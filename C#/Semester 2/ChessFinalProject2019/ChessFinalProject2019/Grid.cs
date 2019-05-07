@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChessFinalProject2019
+namespace ChessFinalProject2019Home
 {
     class Grid
     {
@@ -58,6 +58,23 @@ namespace ChessFinalProject2019
             //debug
             Nodes[2, 4] = new Node(Piece.Queen, Player.Black, 2, 4);
             //Nodes[2, 4] = new Node(Piece.Bishop, Player.Black, 2, 4);
+        }
+
+        public Tuple<int, int> PieceMove(int x, int y)
+        {
+            return new Tuple<int, int>(x, y);
+        }
+
+        public string GetPiece(int x, int y)
+        {
+            string s = Nodes[x, y].piece.ToString();
+            return s;
+        }
+
+        public string GetPlayer(int x, int y)
+        {
+            string s = Nodes[x, y].player.ToString();
+            return s;
         }
 
         public List<Tuple<int, int>> Highlight(int x, int y)
@@ -172,7 +189,7 @@ namespace ChessFinalProject2019
                     correctSpaces.Add(new Tuple<int, int>(n.x, yn));
                 }
                 else
-                    bstopped = true;                
+                    bstopped = true;
             }
 
             return correctSpaces;
