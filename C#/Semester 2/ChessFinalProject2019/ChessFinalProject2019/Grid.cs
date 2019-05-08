@@ -60,18 +60,31 @@ namespace ChessFinalProject2019Home
             //Nodes[2, 4] = new Node(Piece.Bishop, Player.Black, 2, 4);
         }
 
-        public Tuple<int, int> PieceMove(int x, int y)
+        public void PieceMove(int x1, int y1, int x2, int y2, Piece piece, Player player)
         {
-            return new Tuple<int, int>(x, y);
+            Nodes[x2, y2] = new Node(piece, player, x2, y2);
+            Nodes[x1, y1] = new Node(Piece.Empty, Player.Empty, x1, y1);
         }
 
-        public string GetPiece(int x, int y)
+        public Piece GetPiece(int x, int y)
+        {
+            Piece p = Nodes[x, y].piece;
+            return p;
+        }
+
+        public string GetPieceString(int x, int y)
         {
             string s = Nodes[x, y].piece.ToString();
             return s;
         }
 
-        public string GetPlayer(int x, int y)
+        public Player GetPlayer(int x, int y)
+        {
+            Player pl = Nodes[x, y].player;
+            return pl;
+        }
+
+        public string GetPlayerString(int x, int y)
         {
             string s = Nodes[x, y].player.ToString();
             return s;
