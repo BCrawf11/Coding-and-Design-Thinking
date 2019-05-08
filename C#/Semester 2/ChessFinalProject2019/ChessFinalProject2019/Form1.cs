@@ -13,7 +13,7 @@ namespace ChessFinalProject2019Home
     public partial class Form1 : Form
     {
         //all paths
-        public string RookWhitePath = AppDomain.CurrentDomain.BaseDirectory + @"RookW.png";
+        string RookWhitePath = AppDomain.CurrentDomain.BaseDirectory + @"RookW.png";
         string RookBlackPath = AppDomain.CurrentDomain.BaseDirectory + @"RookB.png";
         string KnightWhitePath = AppDomain.CurrentDomain.BaseDirectory + @"KnightW.png";
         string KnightBlackPath = AppDomain.CurrentDomain.BaseDirectory + @"KnightB.png";
@@ -158,13 +158,16 @@ namespace ChessFinalProject2019Home
                 for (int j = 0; j < 8; j++)
                 {
                     int x = i, y = j;
+                    int x1, y1;
 
                     buttons[x, y].MouseEnter += (o, e) => HighlightPossibleRoutes(x, y);
                     buttons[x, y].MouseEnter += (o, e) => ChangeColor(x, y, Color.Tan);
 
-                    if (buttons1_Click(x, y, e) == true && button2isclicked)
+                    if (Click1(x, y, e) == true)
                     {
-                        buttons[x, y].MouseEnter += (o, e) => buttons2_Click(x, y, e);
+                        x1 = x;
+                        y1 = y;
+                        buttons[x, y].Click += (o, e) => Click2MovePiece(x1, y1, x, y, e);
                     }
 
                 }
@@ -210,18 +213,32 @@ namespace ChessFinalProject2019Home
 
         private bool Click1(int x, int y, EventArgs e)
         {
-            if (chessBoard.GetPiece(x, y) != "Empty")
-            button1Clicked = true;
+            if (chessBoard.GetPieceString(x, y) != "Empty")
+            {
+                if ((chessBoard.GetPlayerString(x, y) == "White" && whiteTurn == true) || 
+                    (chessBoard.GetPlayerString(x, y) == "Black" && whiteTurn == false))
+                {
+                    button1Clicked = true;
+                }
+            }
+            else
+                button1Clicked = false;
+
             return button1Clicked;
         }
 
-        //only calls if another piece is clicked before and the next piece is clicked
-        private void Click2(int x, int y, EventArgs e)
+        //only calls if another correct piece is clicked before
+        private void Click2MovePiece(int x1, int y1, int x2, int y2, EventArgs e)
         {
-            Tuple<int, int> toMove = chessBoard.PieceMove(x, y);
-            List<Tuple<int, int>> correctSpaces = new List<Tuple<int, int>>();
-            correctSpaces = chessBoard.Highlight(x, y);
             bool canMove = false;
+            List<Tuple<int, int>> correctSpaces = new List<Tuple<int, int>>();
+            Tuple<int, int> toMove = new Tuple<int, int>(x2, y2);
+
+            Piece piece = chessBoard.GetPiece(x1, y1);
+            Player player = chessBoard.GetPlayer(x1, y1);
+
+            chessBoard.PieceMove(x1, y1, x2, y2, piece, player);
+            correctSpaces = chessBoard.Highlight(x2, y2);
 
             for (int i = 0; i < correctSpaces.Count; i++)
             {
@@ -233,16 +250,16 @@ namespace ChessFinalProject2019Home
                 else
                 {
                     canMove = false;
-                    break;
                 }
             }
 
             if (button1Clicked == true && canMove == true)
             {
                 buttons[toMove.Item1, toMove.Item2].BackgroundImage = 
-                    Image.FromFile(chessBoard.GetPiece(toMove.Item1, toMove.Item2) + chessBoard.GetPlayer(toMove.Item1, toMove.Item2) + "Path");
+                    Image.FromFile(chessBoard.GetPieceString(toMove.Item1, toMove.Item2) + chessBoard.GetPlayerString(toMove.Item1, toMove.Item2) + "Path");
+                buttons[x1, y1].BackgroundImage = null;
 
-                if (chessBoard.GetPlayer(toMove.Item1, toMove.Item2) == "Black")
+                if (chessBoard.GetPlayerString(toMove.Item1, toMove.Item2) == "Black")
                 {
                     whiteTurn = true;
                 }
