@@ -29,6 +29,7 @@ namespace ChessFinalProject2019Home
 
         private bool button1Clicked = false;
         public bool whiteTurn = true;
+        public int NumberOfClicks = 1;
         Grid chessBoard = new Grid();
         Button[,] buttons = new Button[8, 8];
 
@@ -153,23 +154,24 @@ namespace ChessFinalProject2019Home
             ////
 
             //makes the buttons a different color when you mouse over them
+            int x1 = 0, y1 = 0;
+
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
                 {
                     int x = i, y = j;
-                    int x1, y1;
 
                     buttons[x, y].MouseEnter += (o, e) => HighlightPossibleRoutes(x, y);
                     buttons[x, y].MouseEnter += (o, e) => ChangeColor(x, y, Color.Tan);
-
-                    if (Click1(x, y, e) == true)
+                    buttons[x, y].Click += (o, e) => MovePieces(x1, y1, x, y, o, e);
+                     
+                    if (button1Clicked == true)
                     {
+                        //not being called
                         x1 = x;
                         y1 = y;
-                        buttons[x, y].Click += (o, e) => Click2MovePiece(x1, y1, x, y, e);
                     }
-
                 }
             }
             //////
@@ -211,63 +213,85 @@ namespace ChessFinalProject2019Home
             }
         }
 
-        private bool Click1(int x, int y, EventArgs e)
+        private void MovePieces(int x1, int y1, int x2, int y2, object sender, EventArgs e)
         {
-            if (chessBoard.GetPieceString(x, y) != "Empty")
+            switch (NumberOfClicks)
             {
-                if ((chessBoard.GetPlayerString(x, y) == "White" && whiteTurn == true) || 
-                    (chessBoard.GetPlayerString(x, y) == "Black" && whiteTurn == false))
-                {
-                    button1Clicked = true;
-                }
-            }
-            else
-                button1Clicked = false;
+                case 1:
 
-            return button1Clicked;
-        }
+                    if (chessBoard.GetPieceString(x1, y1) != "Empty")
+                    {
+                        if ((chessBoard.GetPlayerString(x1, y1) == "White" && whiteTurn == true) ||
+                            (chessBoard.GetPlayerString(x1, y1) == "Black" && whiteTurn == false))
+                        {
+                            NumberOfClicks = 2;
+                            button1Clicked = true;
+                        }
+                    }
 
-        //only calls if another correct piece is clicked before
-        private void Click2MovePiece(int x1, int y1, int x2, int y2, EventArgs e)
-        {
-            bool canMove = false;
-            List<Tuple<int, int>> correctSpaces = new List<Tuple<int, int>>();
-            Tuple<int, int> toMove = new Tuple<int, int>(x2, y2);
-
-            Piece piece = chessBoard.GetPiece(x1, y1);
-            Player player = chessBoard.GetPlayer(x1, y1);
-
-            chessBoard.PieceMove(x1, y1, x2, y2, piece, player);
-            correctSpaces = chessBoard.Highlight(x2, y2);
-
-            for (int i = 0; i < correctSpaces.Count; i++)
-            {
-                if (correctSpaces[i] == toMove)
-                {
-                    canMove = true;
                     break;
-                }
-                else
-                {
-                    canMove = false;
-                }
-            }
 
-            if (button1Clicked == true && canMove == true)
-            {
-                buttons[toMove.Item1, toMove.Item2].BackgroundImage = 
-                    Image.FromFile(chessBoard.GetPieceString(toMove.Item1, toMove.Item2) + chessBoard.GetPlayerString(toMove.Item1, toMove.Item2) + "Path");
-                buttons[x1, y1].BackgroundImage = null;
+                case 2:
 
-                if (chessBoard.GetPlayerString(toMove.Item1, toMove.Item2) == "Black")
-                {
-                    whiteTurn = true;
-                }
-                else
-                    whiteTurn = false;
+                    bool canMove = false;
+
+                    List<Tuple<int, int>> correctSpaces = new List<Tuple<int, int>>();
+                    Tuple<int, int> toMove = new Tuple<int, int>(x2, y2);
+
+                    Piece piece = chessBoard.GetPiece(x1, y1);
+                    Player player = chessBoard.GetPlayer(x1, y1);
+
+                    chessBoard.PieceMove(x1, y1, x2, y2, piece, player);
+                    //not working??
+                    correctSpaces = chessBoard.Highlight(x1, y1);
+
+                    //not working
+                    for (int i = 0; i < correctSpaces.Count; i++)
+                    {
+                        if (correctSpaces[i] == toMove)
+                        {
+                            canMove = true;
+                            break;
+                        }
+                        else
+                        {
+                            canMove = false;
+                        }
+                    }
+
+                    //not working because the for loop isn't working
+                    if (button1Clicked == true && canMove == true)
+                    {
+                        //not calling
+                        string imagePath = "";
+
+                        imagePath += chessBoard.GetPieceString(toMove.Item1, toMove.Item2);
+                        imagePath += chessBoard.GetPlayerString(toMove.Item1, toMove.Item2);
+                        imagePath += "Path";
+
+                        buttons[toMove.Item1, toMove.Item2].BackgroundImage = Image.FromFile(imagePath);
+
+                        buttons[x1, y1].BackgroundImage = null;
+
+                        NumberOfClicks = 1;
+                        button1Clicked = false;
+                        canMove = false;
+
+                        if (chessBoard.GetPlayerString(toMove.Item1, toMove.Item2) == "Black")
+                        {
+                            whiteTurn = true;
+                        }
+                        else
+                            whiteTurn = false;
+                        //////
+                    }
+                    else
+                    {
+                        return;
+                    }
+
+                    break;
             }
-            else
-                return;
         }
     }
 }
