@@ -16,7 +16,7 @@ namespace ChessFinalProject2019
         public int x;
         public int y;
 
-        public Node (Piece p, Player pl, int x, int y)
+        public Node(Piece p, Player pl, int x, int y)
         {
             this.piece = p;
             this.player = pl;
