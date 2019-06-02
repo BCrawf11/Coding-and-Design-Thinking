@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChessFinalProject2019Home
+namespace ChessFinalProject2019
 {
     class Grid
     {
@@ -56,7 +56,8 @@ namespace ChessFinalProject2019Home
             Nodes[7, 7] = new Node(Piece.Rook, Player.Black, 7, 7);
 
             //debug
-            Nodes[2, 4] = new Node(Piece.Queen, Player.Black, 2, 4);
+            Nodes[2, 4] = new Node(Piece.Rook, Player.Black, 2, 4);
+            Nodes[5, 4] = new Node(Piece.Rook, Player.White, 5, 4);
             //Nodes[2, 4] = new Node(Piece.Bishop, Player.Black, 2, 4);
         }
 
@@ -93,11 +94,6 @@ namespace ChessFinalProject2019Home
         public List<Tuple<int, int>> Highlight(int x, int y)
         {
             List<Tuple<int, int>> correctSpaces = new List<Tuple<int, int>>();
-
-            //foreach (var item in correctSpaces)
-            //{
-            //    item.Item1
-            //}
 
             if (Nodes[x, y].piece == Piece.Rook)
             {
@@ -159,22 +155,43 @@ namespace ChessFinalProject2019Home
                     continue;
                 }
 
-                if (xp <= 7 && Nodes[xp, n.y].piece == Piece.Empty && !rstopped)
+                if (xp > 7)
+                {
+                    rstopped = true;
+                }
+
+                if (xn < 0)
+                {
+                    lstopped = true;
+                }
+
+                if (!rstopped && Nodes[xp, n.y].piece == Piece.Empty)
                 {
                     correctSpaces.Add(new Tuple<int, int>(xp, n.y));
                 }
                 else
-                    //if opposite color, etc & curly bois & other methods
+                {
+                    //can capture the opposite player
+                    if (!rstopped && Nodes[xp, n.y].player != Nodes[n.x, n.y].player)
+                    {
+                        correctSpaces.Add(new Tuple<int, int>(xp, n.y));
+                    }
                     rstopped = true;
+                }
 
-
-                if (xn >= 0 && Nodes[xn, n.y].piece == Piece.Empty && !lstopped)
+                if (!lstopped && Nodes[xn, n.y].piece == Piece.Empty)
                 {
                     correctSpaces.Add(new Tuple<int, int>(xn, n.y));
                 }
                 else
-                    //if opposite color, etc & curly bois & other methods
+                {
+                    //can capture the opposite player
+                    if (!lstopped && Nodes[xn, n.y].player != Nodes[n.x, n.y].player)
+                    {
+                        correctSpaces.Add(new Tuple<int, int>(xn, n.y));
+                    }
                     lstopped = true;
+                }
             }
 
             bool ustopped = false;
@@ -190,19 +207,43 @@ namespace ChessFinalProject2019Home
                     continue;
                 }
 
-                if (yp <= 7 && Nodes[n.x, yp].piece == Piece.Empty && !ustopped)
+                if (yp > 7)
+                {
+                    ustopped = true;
+                }
+
+                if (yn < 0)
+                {
+                    bstopped = true;
+                }
+
+                if (!ustopped && Nodes[n.x, yp].piece == Piece.Empty)
                 {
                     correctSpaces.Add(new Tuple<int, int>(n.x, yp));
                 }
                 else
+                {
+                    //can capture the opposite player
+                    if (!ustopped && Nodes[n.x, yp].player != Nodes[n.x, n.y].player)
+                    {
+                        correctSpaces.Add(new Tuple<int, int>(n.x, yp));
+                    }
                     ustopped = true;
+                }
 
-                if (yn >= 0 && Nodes[n.x, yn].piece == Piece.Empty && !bstopped)
+                if (!bstopped && Nodes[n.x, yn].piece == Piece.Empty)
                 {
                     correctSpaces.Add(new Tuple<int, int>(n.x, yn));
                 }
                 else
+                {
+                    //can capture the opposite player
+                    if (!bstopped && Nodes[n.x, yn].player != Nodes[n.x, n.y].player)
+                    {
+                        correctSpaces.Add(new Tuple<int, int>(n.x, yn));
+                    }
                     bstopped = true;
+                }
             }
 
             return correctSpaces;

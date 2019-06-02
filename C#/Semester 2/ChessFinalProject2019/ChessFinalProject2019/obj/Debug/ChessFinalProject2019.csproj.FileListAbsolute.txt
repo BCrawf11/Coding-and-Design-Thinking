@@ -18,3 +18,13 @@ C:\Users\166097\Documents\Junior-Year-Coding-Class\C#\Semester 2\ChessFinalProje
 C:\Users\166097\Documents\Junior-Year-Coding-Class\C#\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.csproj.CoreCompileInputs.cache
 C:\Users\166097\Documents\Junior-Year-Coding-Class\C#\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.exe
 C:\Users\166097\Documents\Junior-Year-Coding-Class\C#\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.pdb
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Semester 2\ChessFinalProject2019\ChessFinalProject2019\bin\Debug\ChessFinalProject2019.exe.config
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Semester 2\ChessFinalProject2019\ChessFinalProject2019\bin\Debug\ChessFinalProject2019.exe
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Semester 2\ChessFinalProject2019\ChessFinalProject2019\bin\Debug\ChessFinalProject2019.pdb
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.csprojAssemblyReference.cache
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.Form1.resources
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.Properties.Resources.resources
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.csproj.GenerateResource.cache
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.csproj.CoreCompileInputs.cache
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.exe
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Semester 2\ChessFinalProject2019\ChessFinalProject2019\obj\Debug\ChessFinalProject2019.pdb
