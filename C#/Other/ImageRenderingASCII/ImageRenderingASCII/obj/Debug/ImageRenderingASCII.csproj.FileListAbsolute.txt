@@ -1,0 +1,9 @@
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Other\ImageRenderingASCII\ImageRenderingASCII\obj\Debug\ImageRenderingASCII.csprojAssemblyReference.cache
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Other\ImageRenderingASCII\ImageRenderingASCII\obj\Debug\ImageRenderingASCII.Properties.Resources.resources
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Other\ImageRenderingASCII\ImageRenderingASCII\obj\Debug\ImageRenderingASCII.csproj.GenerateResource.cache
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Other\ImageRenderingASCII\ImageRenderingASCII\bin\Debug\ImageRenderingASCII.exe.config
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Other\ImageRenderingASCII\ImageRenderingASCII\bin\Debug\ImageRenderingASCII.exe
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Other\ImageRenderingASCII\ImageRenderingASCII\bin\Debug\ImageRenderingASCII.pdb
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Other\ImageRenderingASCII\ImageRenderingASCII\obj\Debug\ImageRenderingASCII.exe
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Other\ImageRenderingASCII\ImageRenderingASCII\obj\Debug\ImageRenderingASCII.pdb
+C:\Users\brodi\OneDrive\BrodieRepository\C#\Other\ImageRenderingASCII\ImageRenderingASCII\obj\Debug\ImageRenderingASCII.Form1.resources

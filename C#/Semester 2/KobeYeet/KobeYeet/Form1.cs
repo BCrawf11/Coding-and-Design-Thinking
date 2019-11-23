@@ -34,7 +34,6 @@ namespace KobeYeet
 
         private void Button_Kobe_Yeet_Click(object sender, EventArgs e)
         {
-            
 
             if (CheckBox_FailSafe.Checked && KobeDate.Value < DateTime.Now)
             {
@@ -43,7 +42,7 @@ namespace KobeYeet
             else
             {
                 Bitmap b = new Bitmap(Picture_Box.Width, Picture_Box.Height);
-                Random rand = new Random();
+                //Random rand = new Random();
 
                 switch (seed)
                 {
