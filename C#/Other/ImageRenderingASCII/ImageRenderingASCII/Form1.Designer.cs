@@ -31,9 +31,11 @@
             this.Picture_Box = new System.Windows.Forms.PictureBox();
             this.Show_Reg_Image = new System.Windows.Forms.Button();
             this.Show_ASCII_Image = new System.Windows.Forms.Button();
-            this.Show_Inv_Image = new System.Windows.Forms.Button();
+            this.Show_Full_Inv_Image = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Show_Half_Inv_Image = new System.Windows.Forms.Button();
+            this.ASCII = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Box)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +49,7 @@
             // 
             // Show_Reg_Image
             // 
-            this.Show_Reg_Image.Location = new System.Drawing.Point(13, 54);
+            this.Show_Reg_Image.Location = new System.Drawing.Point(12, 54);
             this.Show_Reg_Image.Name = "Show_Reg_Image";
             this.Show_Reg_Image.Size = new System.Drawing.Size(155, 45);
             this.Show_Reg_Image.TabIndex = 2;
@@ -57,22 +59,23 @@
             // 
             // Show_ASCII_Image
             // 
-            this.Show_ASCII_Image.Location = new System.Drawing.Point(12, 156);
+            this.Show_ASCII_Image.Location = new System.Drawing.Point(12, 207);
             this.Show_ASCII_Image.Name = "Show_ASCII_Image";
             this.Show_ASCII_Image.Size = new System.Drawing.Size(155, 45);
             this.Show_ASCII_Image.TabIndex = 3;
             this.Show_ASCII_Image.Text = "Show ASCII Image";
             this.Show_ASCII_Image.UseVisualStyleBackColor = true;
+            this.Show_ASCII_Image.Click += new System.EventHandler(this.Show_ASCII_Image_Click);
             // 
-            // Show_Inv_Image
+            // Show_Full_Inv_Image
             // 
-            this.Show_Inv_Image.Location = new System.Drawing.Point(12, 105);
-            this.Show_Inv_Image.Name = "Show_Inv_Image";
-            this.Show_Inv_Image.Size = new System.Drawing.Size(155, 45);
-            this.Show_Inv_Image.TabIndex = 4;
-            this.Show_Inv_Image.Text = "Show Inverted Colors Image";
-            this.Show_Inv_Image.UseVisualStyleBackColor = true;
-            this.Show_Inv_Image.Click += new System.EventHandler(this.Show_Inv_Image_Click);
+            this.Show_Full_Inv_Image.Location = new System.Drawing.Point(12, 156);
+            this.Show_Full_Inv_Image.Name = "Show_Full_Inv_Image";
+            this.Show_Full_Inv_Image.Size = new System.Drawing.Size(155, 45);
+            this.Show_Full_Inv_Image.TabIndex = 4;
+            this.Show_Full_Inv_Image.Text = "Show Full Inverted Colors Image";
+            this.Show_Full_Inv_Image.UseVisualStyleBackColor = true;
+            this.Show_Full_Inv_Image.Click += new System.EventHandler(this.Show_Full_Inv_Image_Click);
             // 
             // textBox1
             // 
@@ -91,17 +94,38 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Enter a file path for your image here:";
             // 
+            // Show_Half_Inv_Image
+            // 
+            this.Show_Half_Inv_Image.Location = new System.Drawing.Point(12, 105);
+            this.Show_Half_Inv_Image.Name = "Show_Half_Inv_Image";
+            this.Show_Half_Inv_Image.Size = new System.Drawing.Size(155, 45);
+            this.Show_Half_Inv_Image.TabIndex = 7;
+            this.Show_Half_Inv_Image.Text = "Show Half Inverted Colors Image";
+            this.Show_Half_Inv_Image.UseVisualStyleBackColor = true;
+            this.Show_Half_Inv_Image.Click += new System.EventHandler(this.Show_Half_Inv_Image_Click);
+            // 
+            // ASCII
+            // 
+            this.ASCII.Location = new System.Drawing.Point(174, 55);
+            this.ASCII.Name = "ASCII";
+            this.ASCII.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ASCII.Size = new System.Drawing.Size(400, 400);
+            this.ASCII.TabIndex = 8;
+            this.ASCII.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 466);
+            this.Controls.Add(this.Show_Half_Inv_Image);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Show_Inv_Image);
+            this.Controls.Add(this.Show_Full_Inv_Image);
             this.Controls.Add(this.Show_ASCII_Image);
             this.Controls.Add(this.Show_Reg_Image);
             this.Controls.Add(this.Picture_Box);
+            this.Controls.Add(this.ASCII);
             this.Name = "Form1";
             this.Text = "ASCII Image Renderer";
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Box)).EndInit();
@@ -115,9 +139,11 @@
         private System.Windows.Forms.PictureBox Picture_Box;
         private System.Windows.Forms.Button Show_Reg_Image;
         private System.Windows.Forms.Button Show_ASCII_Image;
-        private System.Windows.Forms.Button Show_Inv_Image;
+        private System.Windows.Forms.Button Show_Full_Inv_Image;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Show_Half_Inv_Image;
+        private System.Windows.Forms.RichTextBox ASCII;
     }
 }
 
