@@ -133,18 +133,20 @@ namespace ImageRenderingASCII
             else
             {
                 ASCII.Clear();
+                Color c1, c2, c3;
                 b = new Bitmap(@"" + path);
+
                 string text = "";
                 string s = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^`'. ";
-                Color c1, c2, c3;
                 int brightness;
+                int MAX_HEIGHT = b.Height - 3;
 
-                ASCII.Font = new Font("Courier New", 0.5f, FontStyle.Regular);
+                ASCII.Font = new Font("Courier New", 1f, FontStyle.Regular);
                 ASCII.SetBounds(174, 55, b.Width + 7, b.Height);
-                // + (int)Math.Round(b.Width * 1.0f)
-                // + (int)Math.Round(b.Height * 1.0f)
+                ASCII_Progress.Minimum = 0;
+                ASCII_Progress.Maximum = MAX_HEIGHT;
 
-                for (int i = 0; i < b.Height - 3; i += 3)
+                for (int i = 0; i < MAX_HEIGHT; i += 3)
                 {
                     for (int j = 0; j < b.Width; j++)
                     {
@@ -152,18 +154,82 @@ namespace ImageRenderingASCII
                         c2 = b.GetPixel(j, i + 1);
                         c3 = b.GetPixel(j, i + 2);
 
-                        //averages the brightness per 2 pixels vertically
+                        //averages the brightness per 3 pixels vertically due to sizing issues
                         brightness = ((int)Math.Round(c1.GetBrightness() * 69) + (int)Math.Round(c2.GetBrightness() * 69) +
                             (int)Math.Round(c3.GetBrightness() * 69)) / 3;
+
                         //adds it to a text string
                         text += s[brightness];
                     }
 
+                    ASCII_Progress.Value = i;
+
+                    //adds a new line, appends it to the text box and then clears it (loads more efficient)
                     text += "\n";
+                    ASCII.AppendText(text);
+                    text = "";
                 }
 
-                //adds the final text to the text box and hides the picture box
-                ASCII.AppendText(text);
+                //adds the final text to the text box and hides the picture box from view
+                Picture_Box.Image = null;
+                Picture_Box.SendToBack();
+            }
+        }
+
+        private void Show_Inv_ASCII_Image_Click(object sender, EventArgs e)
+        {
+            //error checking
+            if (path == "")
+            {
+                textBox1.Text = "Please enter a file path first.";
+            }
+            else
+            {
+                ASCII.Clear();
+                Color c1, c2, c3;
+                b = new Bitmap(@"" + path);
+
+                string text = "";
+                string s = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/||()1{}[]?-_+~<>i!lI;:,\"^`'. ";
+                string brightChars = "";
+                int brightness;
+                int MAX_HEIGHT = b.Height - 3;
+
+                for (int i = s.Length - 1; i >= 0; i--)
+                {
+                    brightChars += s[i];
+                }
+
+                ASCII.Font = new Font("Courier New", 1f, FontStyle.Regular);
+                ASCII.SetBounds(174, 55, b.Width + 7, b.Height);
+                Inv_ASCII_Progress.Minimum = 0;
+                Inv_ASCII_Progress.Maximum = MAX_HEIGHT;
+
+                for (int i = 0; i < MAX_HEIGHT; i += 3)
+                {
+                    for (int j = 0; j < b.Width; j++)
+                    {
+                        c1 = b.GetPixel(j, i);
+                        c2 = b.GetPixel(j, i + 1);
+                        c3 = b.GetPixel(j, i + 2);
+
+                        //averages the brightness per 3 pixels vertically due to sizing issues
+                        brightness = ((int)Math.Round(c1.GetBrightness() * 69) + (int)Math.Round(c2.GetBrightness() * 69) +
+                            (int)Math.Round(c3.GetBrightness() * 69)) / 3;
+
+                        //adds it to a text string
+                        text += brightChars[brightness];
+                    }
+
+                    Inv_ASCII_Progress.Value = i;
+
+                    //adds a new line, appends it to the text box and then clears it (loads more efficient)
+                    text += "\n";
+                    ASCII.AppendText(text);
+                    text = "";
+                }
+
+                //adds the final text to the text box and hides the picture box from view
                 Picture_Box.Image = null;
                 Picture_Box.SendToBack();
             }
@@ -174,9 +240,12 @@ namespace ImageRenderingASCII
         ///-Inverse ASCII (light is dark, dark is light)
         ///-Half Inverse ASCII (checkerboard inverse, not sure if visible)
 
-        //file paths:
-        //@"C:\Users\brodi\OneDrive\Desktop\PrisonMikeHeadBMP.bmp";
-        //@"C:\Users\brodi\OneDrive\Desktop\FamilyPhotoHawaii.bmp";
-        //@"C:\Users\brodi\OneDrive\Desktop\DecalDwight.bmp";
+        ///<summary>
+        ///file paths:
+        ///@"C:\Users\brodi\OneDrive\Desktop\PrisonMikeHeadBMP.bmp";
+        ///@"C:\Users\brodi\OneDrive\Desktop\FamilyPhotoHawaii.bmp";
+        ///@"C:\Users\brodi\OneDrive\Desktop\DecalDwight.bmp";
+        ///@"C:\Users\brodi\OneDrive\Desktop\GraysenBMP.bmp";
+        ///@"C:\Users\brodi\OneDrive\Desktop\FireBMP.bmp";
     }
 }

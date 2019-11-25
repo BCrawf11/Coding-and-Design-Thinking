@@ -36,6 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Show_Half_Inv_Image = new System.Windows.Forms.Button();
             this.ASCII = new System.Windows.Forms.RichTextBox();
+            this.Show_Inv_ASCII_Image = new System.Windows.Forms.Button();
+            this.ASCII_Progress = new System.Windows.Forms.ProgressBar();
+            this.Inv_ASCII_Progress = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Box)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,11 +116,39 @@
             this.ASCII.TabIndex = 8;
             this.ASCII.Text = "";
             // 
+            // Show_Inv_ASCII_Image
+            // 
+            this.Show_Inv_ASCII_Image.Location = new System.Drawing.Point(12, 276);
+            this.Show_Inv_ASCII_Image.Name = "Show_Inv_ASCII_Image";
+            this.Show_Inv_ASCII_Image.Size = new System.Drawing.Size(155, 45);
+            this.Show_Inv_ASCII_Image.TabIndex = 9;
+            this.Show_Inv_ASCII_Image.Text = "Show Inverse ASCII Image";
+            this.Show_Inv_ASCII_Image.UseVisualStyleBackColor = true;
+            this.Show_Inv_ASCII_Image.Click += new System.EventHandler(this.Show_Inv_ASCII_Image_Click);
+            // 
+            // ASCII_Progress
+            // 
+            this.ASCII_Progress.Location = new System.Drawing.Point(12, 258);
+            this.ASCII_Progress.Name = "ASCII_Progress";
+            this.ASCII_Progress.Size = new System.Drawing.Size(100, 12);
+            this.ASCII_Progress.TabIndex = 10;
+            // 
+            // Inv_ASCII_Progress
+            // 
+            this.Inv_ASCII_Progress.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Inv_ASCII_Progress.Location = new System.Drawing.Point(12, 327);
+            this.Inv_ASCII_Progress.Name = "Inv_ASCII_Progress";
+            this.Inv_ASCII_Progress.Size = new System.Drawing.Size(100, 12);
+            this.Inv_ASCII_Progress.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 466);
+            this.Controls.Add(this.Inv_ASCII_Progress);
+            this.Controls.Add(this.ASCII_Progress);
+            this.Controls.Add(this.Show_Inv_ASCII_Image);
             this.Controls.Add(this.Show_Half_Inv_Image);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -144,6 +175,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Show_Half_Inv_Image;
         private System.Windows.Forms.RichTextBox ASCII;
+        private System.Windows.Forms.Button Show_Inv_ASCII_Image;
+        private System.Windows.Forms.ProgressBar ASCII_Progress;
+        private System.Windows.Forms.ProgressBar Inv_ASCII_Progress;
     }
 }
 
