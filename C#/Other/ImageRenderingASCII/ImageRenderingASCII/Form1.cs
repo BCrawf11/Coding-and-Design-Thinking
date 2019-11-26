@@ -35,6 +35,32 @@ namespace ImageRenderingASCII
             return c;
         }
 
+        private Color findAvgColor(Color a, Color b)
+        {
+            Color avg;
+
+            int rAvg = (a.R + b.R) / 2;
+            int gAvg = (a.G + b.G) / 2;
+            int bAvg = (a.B + b.B) / 2;
+
+            avg = Color.FromArgb(rAvg, gAvg, bAvg);
+
+            return avg;
+        }
+
+        private Color findAvgColor(Color a, Color b, Color c, Color d)
+        {
+            Color avg;
+
+            int rAvg = (a.R + b.R + c.R + d.R) / 4;
+            int gAvg = (a.G + b.G + c.G + d.G) / 4;
+            int bAvg = (a.B + b.B + c.B + d.B) / 4;
+
+            avg = Color.FromArgb(rAvg, gAvg, bAvg);
+
+            return avg;
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             path = textBox1.Text;
@@ -233,6 +259,75 @@ namespace ImageRenderingASCII
                 Picture_Box.Image = null;
                 Picture_Box.SendToBack();
             }
+        }
+
+        private void Show_Blurred_Image_Click(object sender, EventArgs e)
+        {
+            if (path == "")
+            {
+                textBox1.Text = "Please enter a file path first.";
+            }
+            else
+            {
+                b = new Bitmap(@"" + path);
+                ModifyPBoxSize(b);
+
+                Color tl, tr, bl, br, avg;
+
+                for (int i = 0; i < Picture_Box.Width; i += 2)
+                {
+                    for (int j = 0; j < Picture_Box.Height; j += 2)
+                    {
+                        if ((i + 1) == Picture_Box.Width && (j + 1) == Picture_Box.Height)
+                        {
+                            break;
+                        }
+
+                        else if ((i + 1) == Picture_Box.Width)
+                        {
+                            tl = b.GetPixel(i, j);
+                            tr = b.GetPixel(i, j + 1);
+
+                            avg = findAvgColor(tl, tr);
+
+                            b.SetPixel(i, j, avg);
+                            b.SetPixel(i, j + 1, avg);
+                        }
+
+                        else if ((j + 1) == Picture_Box.Height)
+                        {
+                            tl = b.GetPixel(i, j);
+                            bl = b.GetPixel(i + 1, j);
+
+                            avg = findAvgColor(tl, bl);
+
+                            b.SetPixel(i, j, avg);
+                            b.SetPixel(i + 1, j, avg);
+                        }
+
+                        else
+                        {
+                            tl = b.GetPixel(i, j);
+                            tr = b.GetPixel(i, j + 1);
+                            bl = b.GetPixel(i + 1, j);
+                            br = b.GetPixel(i + 1, j + 1);
+
+                            avg = findAvgColor(tl, tr, bl, br);
+
+                            b.SetPixel(i, j, avg);
+                            b.SetPixel(i, j + 1, avg);
+                            b.SetPixel(i + 1, j, avg);
+                            b.SetPixel(i + 1, j + 1, avg);
+                        }
+                    }
+                }
+
+                Picture_Box.Image = b;
+            }
+
+            //sets the ASCII text box back to its original bounds and hides it behind the picture box
+            ASCII.SetBounds(174, 55, b.Width, b.Height);
+            ASCII.SendToBack();
         }
 
         ///<summary>

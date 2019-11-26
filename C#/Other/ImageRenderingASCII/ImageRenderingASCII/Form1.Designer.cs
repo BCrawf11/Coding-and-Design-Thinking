@@ -39,6 +39,7 @@
             this.Show_Inv_ASCII_Image = new System.Windows.Forms.Button();
             this.ASCII_Progress = new System.Windows.Forms.ProgressBar();
             this.Inv_ASCII_Progress = new System.Windows.Forms.ProgressBar();
+            this.Show_Blurred_Image = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Box)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +85,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 28);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(560, 20);
+            this.textBox1.Size = new System.Drawing.Size(562, 20);
             this.textBox1.TabIndex = 5;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -141,11 +142,22 @@
             this.Inv_ASCII_Progress.Size = new System.Drawing.Size(100, 12);
             this.Inv_ASCII_Progress.TabIndex = 11;
             // 
+            // Show_Blurred_Image
+            // 
+            this.Show_Blurred_Image.Location = new System.Drawing.Point(12, 345);
+            this.Show_Blurred_Image.Name = "Show_Blurred_Image";
+            this.Show_Blurred_Image.Size = new System.Drawing.Size(155, 45);
+            this.Show_Blurred_Image.TabIndex = 12;
+            this.Show_Blurred_Image.Text = "Show Blurred Image";
+            this.Show_Blurred_Image.UseVisualStyleBackColor = true;
+            this.Show_Blurred_Image.Click += new System.EventHandler(this.Show_Blurred_Image_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 466);
+            this.Controls.Add(this.Show_Blurred_Image);
             this.Controls.Add(this.Inv_ASCII_Progress);
             this.Controls.Add(this.ASCII_Progress);
             this.Controls.Add(this.Show_Inv_ASCII_Image);
@@ -178,6 +190,7 @@
         private System.Windows.Forms.Button Show_Inv_ASCII_Image;
         private System.Windows.Forms.ProgressBar ASCII_Progress;
         private System.Windows.Forms.ProgressBar Inv_ASCII_Progress;
+        private System.Windows.Forms.Button Show_Blurred_Image;
     }
 }
 
