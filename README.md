@@ -1,1 +1,1 @@
-# Junior-Year-Coding-Class
+# Coding and Design Thinking
