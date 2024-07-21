@@ -337,10 +337,9 @@ namespace ImageRenderingASCII
 
         ///<summary>
         ///file paths:
-        ///@"C:\Users\brodi\OneDrive\Desktop\Images\PrisonMikeHeadBMP.bmp";
-        ///@"C:\Users\brodi\OneDrive\Desktop\Images\FamilyPhotoHawaii.bmp";
-        ///@"C:\Users\brodi\OneDrive\Desktop\Images\DecalDwight.bmp";
-        ///@"C:\Users\brodi\OneDrive\Desktop\Images\GraysenBMP.bmp";
-        ///@"C:\Users\brodi\OneDrive\Desktop\Images\FireBMP.bmp";
+        ///@"C:\Users\brodi\OneDrive\Desktop\Brodie\Images\ASCII Renderer\PrisonMikeHeadBMP.bmp";
+        ///@"C:\Users\brodi\OneDrive\Desktop\Brodie\Images\ASCII Renderer\FamilyPhotoHawaiiBMP.bmp";
+        ///@"C:\Users\brodi\OneDrive\Desktop\Brodie\Images\ASCII Renderer\DecalDwightBMP.bmp";
+        ///@"C:\Users\brodi\OneDrive\Desktop\Brodie\Images\ASCII Renderer\FireBMP.bmp";
     }
 }
